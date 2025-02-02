@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Src.Control
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class TopDownController : MonoBehaviour
     {
         private static readonly int Moving = Animator.StringToHash("Moving");
@@ -14,6 +16,7 @@ namespace Src.Control
 
         private PlayerInput _playerInput;
         private Rigidbody2D _rigidbody2D;
+        private Vector2 _direction;
 
         private void Awake()
         {
@@ -25,21 +28,26 @@ namespace Src.Control
         {
             _playerInput.onActionTriggered += ActionTriggered;
         }
+        
+        private void OnDisable()
+        {
+            _playerInput.onActionTriggered -= ActionTriggered;
+        }
+
+        private void FixedUpdate()
+        {
+            _rigidbody2D.linearVelocity = _direction * RunSpeed;
+
+            FlipSprite(_direction);
+            ChangeAnimationToRun(_direction);
+        }
 
         private void ActionTriggered(InputAction.CallbackContext callbackContext)
         {
             if (callbackContext.action.name == "Move")
             {
-                Move(callbackContext.ReadValue<Vector2>().normalized);
+                _direction = callbackContext.ReadValue<Vector2>().normalized;
             }
-        }
-
-        private void Move(Vector2 direction)
-        {
-            _rigidbody2D.linearVelocity = direction * RunSpeed;
-
-            FlipSprite(direction);
-            ChangeAnimationToRun(direction);
         }
 
         private void FlipSprite(Vector2 direction)
