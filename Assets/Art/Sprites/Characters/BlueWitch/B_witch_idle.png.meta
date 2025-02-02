@@ -118,10 +118,10 @@ TextureImporter:
       name: B_witch_idle_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 245
-        width: 22
-        height: 40
+        x: 0
+        y: 240
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: B_witch_idle_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 197
-        width: 22
-        height: 39
+        x: 0
+        y: 192
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: B_witch_idle_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 149
-        width: 22
-        height: 37
+        x: 0
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: B_witch_idle_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 101
-        width: 21
-        height: 38
+        x: 0
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: B_witch_idle_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 53
-        width: 21
-        height: 41
+        x: 0
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: B_witch_idle_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 5
-        width: 23
-        height: 40
+        x: 0
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3b0069728142e9e4c9bebd6668dab2d3
     internalID: 0
     vertices: []
     indices: 
