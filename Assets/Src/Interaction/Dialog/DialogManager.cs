@@ -1,4 +1,5 @@
-using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 using Src.Control;
 using TMPro;
 using UnityEngine;
@@ -17,7 +18,8 @@ namespace Src.Interaction.Dialog
         private string[] _lines = { };
         private int _index;
         private bool _isTyping;
-        private Coroutine _typingCoroutine;
+        private CancellationTokenSource _cancellationTokenSource;
+
 
         private TopDownController _characterController;
         private PlayerInput _playerInput;
@@ -43,6 +45,8 @@ namespace Src.Interaction.Dialog
             }
 
             _playerInput.actions["Interact"].started -= OnInteract;
+
+            CancelTypingTask();
         }
 
         public void StartDialogue(string[] lines, AudioClip textClip)
@@ -51,14 +55,13 @@ namespace Src.Interaction.Dialog
             _lines = lines;
             _index = 0;
 
-            if (_typingCoroutine != null)
-            {
-                StopCoroutine(_typingCoroutine);
-            }
+            CancelTypingTask();
 
             _dialogText.text = "";
             _audioSource.clip = textClip;
-            _typingCoroutine = StartCoroutine(TypeLine());
+
+            _cancellationTokenSource = new CancellationTokenSource();
+            _ = TypeLineAsync(_cancellationTokenSource.Token);
         }
 
         private void OnInteract(InputAction.CallbackContext callbackContext)
@@ -70,7 +73,7 @@ namespace Src.Interaction.Dialog
 
             if (_isTyping)
             {
-                StopCoroutine(_typingCoroutine);
+                CancelTypingTask();
                 _dialogText.text = _lines[_index];
                 _isTyping = false;
             }
@@ -79,7 +82,8 @@ namespace Src.Interaction.Dialog
                 _index++;
                 if (_index < _lines.Length)
                 {
-                    _typingCoroutine = StartCoroutine(TypeLine());
+                    _cancellationTokenSource = new CancellationTokenSource();
+                    _ = TypeLineAsync(_cancellationTokenSource.Token);
                 }
                 else
                 {
@@ -90,19 +94,46 @@ namespace Src.Interaction.Dialog
             }
         }
 
-        private IEnumerator TypeLine()
+        private async Task TypeLineAsync(CancellationToken cancellationToken)
         {
             _isTyping = true;
             _dialogText.text = "";
 
             foreach (var c in _lines[_index])
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    _isTyping = false;
+                    return;
+                }
+
                 _dialogText.text += c;
                 _audioSource.Play();
-                yield return new WaitForSeconds(TextSpeed);
+
+                try
+                {
+                    await Task.Delay((int)(TextSpeed * 1000), cancellationToken);
+                }
+                catch (TaskCanceledException)
+                {
+                    _isTyping = false;
+                    return;
+                }
             }
 
             _isTyping = false;
+        }
+
+        private void CancelTypingTask()
+        {
+            if (_cancellationTokenSource == null)
+            {
+                return;
+            }
+
+            _cancellationTokenSource.Cancel();
+            _cancellationTokenSource.Dispose();
+            _cancellationTokenSource = null;
         }
     }
 }

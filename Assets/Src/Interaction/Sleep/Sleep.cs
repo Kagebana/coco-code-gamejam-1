@@ -23,13 +23,13 @@ namespace Src.Interaction.Sleep
         {
             _characterRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
 
-            await MoveToTarget();
+            await MoveToSleepAsync();
 
             //_characterRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
             //_characterController.CanControl = true;
         }
 
-        private async Task MoveToTarget()
+        private async Task MoveToSleepAsync()
         {
             Vector2 targetPosition = _toPoint.position;
 
@@ -38,7 +38,6 @@ namespace Src.Interaction.Sleep
                 var direction = (targetPosition - _characterRigidbody2D.position).normalized * SpeedMultiply;
                 _characterController.Direction = direction;
                 await Task.Yield();
-                ;
             }
 
             _characterController.Direction = Vector2.zero;
