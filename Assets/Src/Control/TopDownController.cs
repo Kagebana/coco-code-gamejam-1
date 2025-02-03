@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,18 +19,25 @@ namespace Src.Control
 
         private void Awake()
         {
-            _playerInput = FindAnyObjectByType<PlayerInput>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         private void OnEnable()
         {
-            _playerInput.onActionTriggered += ActionTriggered;
+            _playerInput = FindAnyObjectByType<PlayerInput>();
+            _playerInput.actions["Move"].performed += Move;
+            _playerInput.actions["Move"].canceled += Move;
         }
-        
+
         private void OnDisable()
         {
-            _playerInput.onActionTriggered -= ActionTriggered;
+            if (!_playerInput)
+            {
+                return;
+            }
+
+            _playerInput.actions["Move"].performed -= Move;
+            _playerInput.actions["Move"].canceled -= Move;
         }
 
         private void FixedUpdate()
@@ -42,12 +48,17 @@ namespace Src.Control
             ChangeAnimationToRun(_direction);
         }
 
-        private void ActionTriggered(InputAction.CallbackContext callbackContext)
+        public bool CanControl { get; set; } = true;
+
+        private void Move(InputAction.CallbackContext callbackContext)
         {
-            if (callbackContext.action.name == "Move")
+            if (!CanControl)
             {
-                _direction = callbackContext.ReadValue<Vector2>().normalized;
+                _direction = Vector2.zero;
+                return;
             }
+
+            _direction = callbackContext.ReadValue<Vector2>().normalized;
         }
 
         private void FlipSprite(Vector2 direction)
