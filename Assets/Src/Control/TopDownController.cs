@@ -15,7 +15,6 @@ namespace Src.Control
 
         private PlayerInput _playerInput;
         private Rigidbody2D _rigidbody2D;
-        private Vector2 _direction;
 
         private void Awake()
         {
@@ -42,23 +41,24 @@ namespace Src.Control
 
         private void FixedUpdate()
         {
-            _rigidbody2D.linearVelocity = _direction * RunSpeed;
+            _rigidbody2D.linearVelocity = Direction * RunSpeed;
 
-            FlipSprite(_direction);
-            ChangeAnimationToRun(_direction);
+            FlipSprite(Direction);
+            ChangeAnimationToRun(Direction);
         }
 
         public bool CanControl { get; set; } = true;
+        public Vector2 Direction { get; set; } = Vector2.zero;
 
         private void Move(InputAction.CallbackContext callbackContext)
         {
             if (!CanControl)
             {
-                _direction = Vector2.zero;
+                Direction = Vector2.zero;
                 return;
             }
 
-            _direction = callbackContext.ReadValue<Vector2>().normalized;
+            Direction = callbackContext.ReadValue<Vector2>().normalized;
         }
 
         private void FlipSprite(Vector2 direction)

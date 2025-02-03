@@ -9,9 +9,10 @@ namespace Src.Interaction.Dialog
     [RequireComponent(typeof(AudioSource))]
     public class DialogManager : MonoBehaviour
     {
+        private const float TextSpeed = 0.05f;
+
         [SerializeField] private GameObject _dialogBox;
         [SerializeField] private TextMeshProUGUI _dialogText;
-        [SerializeField] private float _textSpeed = 0.05f;
 
         private string[] _lines = { };
         private int _index;
@@ -44,7 +45,7 @@ namespace Src.Interaction.Dialog
             _playerInput.actions["Interact"].started -= OnInteract;
         }
 
-        public void StartDialogue(string[] lines)
+        public void StartDialogue(string[] lines, AudioClip textClip)
         {
             _dialogBox.SetActive(true);
             _lines = lines;
@@ -56,11 +57,17 @@ namespace Src.Interaction.Dialog
             }
 
             _dialogText.text = "";
+            _audioSource.clip = textClip;
             _typingCoroutine = StartCoroutine(TypeLine());
         }
 
         private void OnInteract(InputAction.CallbackContext callbackContext)
         {
+            if (!_dialogBox.activeSelf)
+            {
+                return;
+            }
+
             if (_isTyping)
             {
                 StopCoroutine(_typingCoroutine);
@@ -92,7 +99,7 @@ namespace Src.Interaction.Dialog
             {
                 _dialogText.text += c;
                 _audioSource.Play();
-                yield return new WaitForSeconds(_textSpeed);
+                yield return new WaitForSeconds(TextSpeed);
             }
 
             _isTyping = false;

@@ -4,6 +4,7 @@ namespace Src.Interaction.Dialog
 {
     public class Dialog : MonoBehaviour, IInteractable
     {
+        [SerializeField] private AudioClip _textDialogClip;
         [TextArea(3, 10)] [SerializeField] private string[] _dialogueLines;
 
         private DialogManager _dialogManager;
@@ -15,7 +16,7 @@ namespace Src.Interaction.Dialog
 
         public void Use()
         {
-            _dialogManager.StartDialogue(_dialogueLines);
+            _dialogManager.StartDialogue(_dialogueLines, _textDialogClip);
         }
     }
 }
