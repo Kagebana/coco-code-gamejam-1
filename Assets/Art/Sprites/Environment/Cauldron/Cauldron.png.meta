@@ -313,7 +313,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cauldron_0
+      name: Red1
       rect:
         serializedVersion: 2
         x: 0
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_1
+      name: Red2
       rect:
         serializedVersion: 2
         x: 48
@@ -357,7 +357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_2
+      name: Red3
       rect:
         serializedVersion: 2
         x: 96
@@ -379,7 +379,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_3
+      name: RedHot1
       rect:
         serializedVersion: 2
         x: 144
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_4
+      name: RedHot2
       rect:
         serializedVersion: 2
         x: 192
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_5
+      name: RedHot3
       rect:
         serializedVersion: 2
         x: 240
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_6
+      name: Green1
       rect:
         serializedVersion: 2
         x: 288
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_7
+      name: Green2
       rect:
         serializedVersion: 2
         x: 336
@@ -489,7 +489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_8
+      name: Green3
       rect:
         serializedVersion: 2
         x: 384
@@ -511,7 +511,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_9
+      name: GreenHot1
       rect:
         serializedVersion: 2
         x: 432
@@ -533,7 +533,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_10
+      name: GreenHot2
       rect:
         serializedVersion: 2
         x: 480
@@ -555,7 +555,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_11
+      name: GreenHot3
       rect:
         serializedVersion: 2
         x: 528
@@ -577,7 +577,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_12
+      name: Red4
       rect:
         serializedVersion: 2
         x: 0
@@ -599,7 +599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_13
+      name: Red5
       rect:
         serializedVersion: 2
         x: 48
@@ -621,7 +621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_14
+      name: Red6
       rect:
         serializedVersion: 2
         x: 96
@@ -643,7 +643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_15
+      name: RedHot4
       rect:
         serializedVersion: 2
         x: 144
@@ -665,7 +665,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_16
+      name: RedHot5
       rect:
         serializedVersion: 2
         x: 192
@@ -687,7 +687,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_17
+      name: RedHot6
       rect:
         serializedVersion: 2
         x: 240
@@ -709,7 +709,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_18
+      name: Green4
       rect:
         serializedVersion: 2
         x: 288
@@ -731,7 +731,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_19
+      name: Green5
       rect:
         serializedVersion: 2
         x: 336
@@ -753,7 +753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_20
+      name: Green6
       rect:
         serializedVersion: 2
         x: 384
@@ -775,7 +775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_21
+      name: GreenHot4
       rect:
         serializedVersion: 2
         x: 432
@@ -797,7 +797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_22
+      name: GreenHot5
       rect:
         serializedVersion: 2
         x: 480
@@ -819,7 +819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_23
+      name: GreenHot6
       rect:
         serializedVersion: 2
         x: 528
@@ -841,7 +841,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_24
+      name: Red7
       rect:
         serializedVersion: 2
         x: 0
@@ -863,7 +863,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_25
+      name: Red8
       rect:
         serializedVersion: 2
         x: 48
@@ -885,7 +885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_26
+      name: Red9
       rect:
         serializedVersion: 2
         x: 96
@@ -907,7 +907,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_27
+      name: RedHot7
       rect:
         serializedVersion: 2
         x: 144
@@ -929,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_28
+      name: RedHot8
       rect:
         serializedVersion: 2
         x: 192
@@ -951,7 +951,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_29
+      name: RedHot9
       rect:
         serializedVersion: 2
         x: 240
@@ -973,7 +973,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_30
+      name: Green7
       rect:
         serializedVersion: 2
         x: 288
@@ -995,7 +995,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_31
+      name: Green8
       rect:
         serializedVersion: 2
         x: 336
@@ -1017,7 +1017,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_32
+      name: Green9
       rect:
         serializedVersion: 2
         x: 384
@@ -1039,7 +1039,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_33
+      name: GreenHot7
       rect:
         serializedVersion: 2
         x: 432
@@ -1061,7 +1061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_34
+      name: GreenHot8
       rect:
         serializedVersion: 2
         x: 480
@@ -1083,7 +1083,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_35
+      name: GreenHot9
       rect:
         serializedVersion: 2
         x: 528
@@ -1105,7 +1105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_36
+      name: Red10
       rect:
         serializedVersion: 2
         x: 0
@@ -1127,7 +1127,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_37
+      name: Red11
       rect:
         serializedVersion: 2
         x: 48
@@ -1149,7 +1149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_38
+      name: Red12
       rect:
         serializedVersion: 2
         x: 96
@@ -1171,7 +1171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_39
+      name: RedHot10
       rect:
         serializedVersion: 2
         x: 144
@@ -1193,7 +1193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_40
+      name: RedHot11
       rect:
         serializedVersion: 2
         x: 192
@@ -1215,7 +1215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_41
+      name: RedHot12
       rect:
         serializedVersion: 2
         x: 240
@@ -1237,7 +1237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_42
+      name: Green10
       rect:
         serializedVersion: 2
         x: 288
@@ -1259,7 +1259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_43
+      name: Green11
       rect:
         serializedVersion: 2
         x: 336
@@ -1281,7 +1281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_44
+      name: Green12
       rect:
         serializedVersion: 2
         x: 384
@@ -1303,7 +1303,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_45
+      name: GreenHot10
       rect:
         serializedVersion: 2
         x: 432
@@ -1325,7 +1325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_46
+      name: GreenHot11
       rect:
         serializedVersion: 2
         x: 480
@@ -1347,7 +1347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_47
+      name: GreenHot12
       rect:
         serializedVersion: 2
         x: 528
@@ -1369,7 +1369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_48
+      name: Pink1
       rect:
         serializedVersion: 2
         x: 0
@@ -1391,7 +1391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_49
+      name: Pink2
       rect:
         serializedVersion: 2
         x: 48
@@ -1413,7 +1413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_50
+      name: Pink3
       rect:
         serializedVersion: 2
         x: 96
@@ -1435,7 +1435,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_51
+      name: PinkHot1
       rect:
         serializedVersion: 2
         x: 144
@@ -1457,7 +1457,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_52
+      name: PinkHot2
       rect:
         serializedVersion: 2
         x: 192
@@ -1479,7 +1479,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_53
+      name: PinkHot3
       rect:
         serializedVersion: 2
         x: 240
@@ -1501,7 +1501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_54
+      name: Purple1
       rect:
         serializedVersion: 2
         x: 288
@@ -1523,7 +1523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_55
+      name: Purple2
       rect:
         serializedVersion: 2
         x: 336
@@ -1545,7 +1545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_56
+      name: Purple3
       rect:
         serializedVersion: 2
         x: 384
@@ -1567,7 +1567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_57
+      name: PurpleHot1
       rect:
         serializedVersion: 2
         x: 432
@@ -1589,7 +1589,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_58
+      name: PurpleHot2
       rect:
         serializedVersion: 2
         x: 480
@@ -1611,7 +1611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_59
+      name: PurpleHot3
       rect:
         serializedVersion: 2
         x: 528
@@ -1633,7 +1633,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_60
+      name: Pink4
       rect:
         serializedVersion: 2
         x: 0
@@ -1655,7 +1655,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_61
+      name: Pink5
       rect:
         serializedVersion: 2
         x: 48
@@ -1677,7 +1677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_62
+      name: Pink6
       rect:
         serializedVersion: 2
         x: 96
@@ -1699,7 +1699,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_63
+      name: PinkHot4
       rect:
         serializedVersion: 2
         x: 144
@@ -1721,7 +1721,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_64
+      name: PinkHot5
       rect:
         serializedVersion: 2
         x: 192
@@ -1743,7 +1743,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_65
+      name: PinkHot6
       rect:
         serializedVersion: 2
         x: 240
@@ -1765,7 +1765,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_66
+      name: Purple4
       rect:
         serializedVersion: 2
         x: 288
@@ -1787,7 +1787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_67
+      name: Purple5
       rect:
         serializedVersion: 2
         x: 336
@@ -1809,7 +1809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_68
+      name: Purple6
       rect:
         serializedVersion: 2
         x: 384
@@ -1831,7 +1831,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_69
+      name: PurpleHot4
       rect:
         serializedVersion: 2
         x: 432
@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_70
+      name: PurpleHot5
       rect:
         serializedVersion: 2
         x: 480
@@ -1875,7 +1875,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_71
+      name: PurpleHot6
       rect:
         serializedVersion: 2
         x: 528
@@ -1897,7 +1897,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_72
+      name: Pink7
       rect:
         serializedVersion: 2
         x: 0
@@ -1919,7 +1919,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_73
+      name: Pink8
       rect:
         serializedVersion: 2
         x: 48
@@ -1941,7 +1941,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_74
+      name: Pink9
       rect:
         serializedVersion: 2
         x: 96
@@ -1963,7 +1963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_75
+      name: PinkHot7
       rect:
         serializedVersion: 2
         x: 144
@@ -1985,7 +1985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_76
+      name: PinkHot8
       rect:
         serializedVersion: 2
         x: 192
@@ -2007,7 +2007,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_77
+      name: PinkHot9
       rect:
         serializedVersion: 2
         x: 240
@@ -2029,7 +2029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_78
+      name: Purple7
       rect:
         serializedVersion: 2
         x: 288
@@ -2051,7 +2051,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_79
+      name: Purple8
       rect:
         serializedVersion: 2
         x: 336
@@ -2073,7 +2073,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_80
+      name: Purple9
       rect:
         serializedVersion: 2
         x: 384
@@ -2095,7 +2095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_81
+      name: PurpleHot7
       rect:
         serializedVersion: 2
         x: 432
@@ -2117,7 +2117,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_82
+      name: PurpleHot8
       rect:
         serializedVersion: 2
         x: 480
@@ -2139,7 +2139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_83
+      name: PurpleHot9
       rect:
         serializedVersion: 2
         x: 528
@@ -2161,7 +2161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_84
+      name: Pink10
       rect:
         serializedVersion: 2
         x: 0
@@ -2183,7 +2183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_85
+      name: Pink11
       rect:
         serializedVersion: 2
         x: 48
@@ -2205,7 +2205,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_86
+      name: Pink12
       rect:
         serializedVersion: 2
         x: 96
@@ -2227,7 +2227,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_87
+      name: PinkHot10
       rect:
         serializedVersion: 2
         x: 144
@@ -2249,7 +2249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_88
+      name: PinkHot11
       rect:
         serializedVersion: 2
         x: 192
@@ -2271,7 +2271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_89
+      name: PinkHot12
       rect:
         serializedVersion: 2
         x: 240
@@ -2293,7 +2293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_90
+      name: Purple10
       rect:
         serializedVersion: 2
         x: 288
@@ -2315,7 +2315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_91
+      name: Purple11
       rect:
         serializedVersion: 2
         x: 336
@@ -2337,7 +2337,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_92
+      name: Purple12
       rect:
         serializedVersion: 2
         x: 384
@@ -2359,7 +2359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_93
+      name: PurpleHot10
       rect:
         serializedVersion: 2
         x: 432
@@ -2381,7 +2381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_94
+      name: PurpleHot11
       rect:
         serializedVersion: 2
         x: 480
@@ -2403,7 +2403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cauldron_95
+      name: PurpleHot12
       rect:
         serializedVersion: 2
         x: 528
@@ -2438,102 +2438,102 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cauldron_0: -5734888567148846429
-      Cauldron_1: 6442685787483345789
-      Cauldron_10: -9114586952687794964
-      Cauldron_11: -688715168378311976
-      Cauldron_12: 5250969652922867143
-      Cauldron_13: -5977901536441460568
-      Cauldron_14: -2680639105447243493
-      Cauldron_15: -2666029378307341424
-      Cauldron_16: 4756691215923834970
-      Cauldron_17: -3072846198397213901
-      Cauldron_18: -1752011210870384522
-      Cauldron_19: -4265348302381519615
-      Cauldron_2: 3951699593749594473
-      Cauldron_20: -5587771688479206200
-      Cauldron_21: -4821443857970804936
-      Cauldron_22: 6368452184036575283
-      Cauldron_23: -4063438598879313699
-      Cauldron_24: 2346044781097903242
-      Cauldron_25: -7397092174548774909
-      Cauldron_26: 9073635787249815755
-      Cauldron_27: -1676374361101574319
-      Cauldron_28: -3171362460986254349
-      Cauldron_29: -1558683156116260682
-      Cauldron_3: 9101191058906655149
-      Cauldron_30: -7398409929251065460
-      Cauldron_31: 4193654197217465973
-      Cauldron_32: 146711563397929236
-      Cauldron_33: -8537602592451620582
-      Cauldron_34: 9134482403291822910
-      Cauldron_35: 32797746273763828
-      Cauldron_36: 6364326815875859551
-      Cauldron_37: -8198835691805668717
-      Cauldron_38: -3132268299360007054
-      Cauldron_39: -3616957574958058786
-      Cauldron_4: -8417778383946691058
-      Cauldron_40: 3840544798913511443
-      Cauldron_41: 510091042352424385
-      Cauldron_42: 2315731966113477840
-      Cauldron_43: -8772589209423185257
-      Cauldron_44: -2850958996618238129
-      Cauldron_45: -8358613979296339850
-      Cauldron_46: -8142527946636086194
-      Cauldron_47: -2438260983707562821
-      Cauldron_48: 6172395308230933040
-      Cauldron_49: -2417752914581458882
-      Cauldron_5: 8826417575303049200
-      Cauldron_50: -2334169741537175121
-      Cauldron_51: -6227125773598067351
-      Cauldron_52: -3068167399487236184
-      Cauldron_53: -2349398485370552960
-      Cauldron_54: 1526310530143420357
-      Cauldron_55: -8574617533588215047
-      Cauldron_56: 1146377161823449664
-      Cauldron_57: -5795050159776370831
-      Cauldron_58: -2153206033527350422
-      Cauldron_59: -7750713066517313670
-      Cauldron_6: 25824725931470919
-      Cauldron_60: 4451938027000621067
-      Cauldron_61: -1525424816931279370
-      Cauldron_62: 7544137494537945200
-      Cauldron_63: 7892662099342677915
-      Cauldron_64: 4415065966814364528
-      Cauldron_65: 3646290255886038838
-      Cauldron_66: 313031042183868055
-      Cauldron_67: 726792114961198850
-      Cauldron_68: -1772910997170728470
-      Cauldron_69: 4975759837261278858
-      Cauldron_7: 4771722570685813392
-      Cauldron_70: -389052282320799771
-      Cauldron_71: -582989011194290838
-      Cauldron_72: 1626068233
-      Cauldron_73: -1560693098
-      Cauldron_74: -1902758641
-      Cauldron_75: 118462983
-      Cauldron_76: -268533718
-      Cauldron_77: 126801164
-      Cauldron_78: 1735509525
-      Cauldron_79: -1381260974
-      Cauldron_8: 911673315082338186
-      Cauldron_80: -1534599114
-      Cauldron_81: 1527077080
-      Cauldron_82: 1870859960
-      Cauldron_83: -1486991402
-      Cauldron_84: -522869640
-      Cauldron_85: 1453644790
-      Cauldron_86: 71342059
-      Cauldron_87: 1352017397
-      Cauldron_88: -157783298
-      Cauldron_89: 515572078
-      Cauldron_9: 6467228865548187311
-      Cauldron_90: 990063014
-      Cauldron_91: 852679086
-      Cauldron_92: -323652033
-      Cauldron_93: -315539394
-      Cauldron_94: 352719277
-      Cauldron_95: 312389965
+      Green1: 25824725931470919
+      Green10: 2315731966113477840
+      Green11: -8772589209423185257
+      Green12: -2850958996618238129
+      Green2: 4771722570685813392
+      Green3: 911673315082338186
+      Green4: -1752011210870384522
+      Green5: -4265348302381519615
+      Green6: -5587771688479206200
+      Green7: -7398409929251065460
+      Green8: 4193654197217465973
+      Green9: 146711563397929236
+      GreenHot1: 6467228865548187311
+      GreenHot10: -8358613979296339850
+      GreenHot11: -8142527946636086194
+      GreenHot12: -2438260983707562821
+      GreenHot2: -9114586952687794964
+      GreenHot3: -688715168378311976
+      GreenHot4: -4821443857970804936
+      GreenHot5: 6368452184036575283
+      GreenHot6: -4063438598879313699
+      GreenHot7: -8537602592451620582
+      GreenHot8: 9134482403291822910
+      GreenHot9: 32797746273763828
+      Pink1: 6172395308230933040
+      Pink10: -522869640
+      Pink11: 1453644790
+      Pink12: 71342059
+      Pink2: -2417752914581458882
+      Pink3: -2334169741537175121
+      Pink4: 4451938027000621067
+      Pink5: -1525424816931279370
+      Pink6: 7544137494537945200
+      Pink7: 1626068233
+      Pink8: -1560693098
+      Pink9: -1902758641
+      PinkHot1: -6227125773598067351
+      PinkHot10: 1352017397
+      PinkHot11: -157783298
+      PinkHot12: 515572078
+      PinkHot2: -3068167399487236184
+      PinkHot3: -2349398485370552960
+      PinkHot4: 7892662099342677915
+      PinkHot5: 4415065966814364528
+      PinkHot6: 3646290255886038838
+      PinkHot7: 118462983
+      PinkHot8: -268533718
+      PinkHot9: 126801164
+      Purple1: 1526310530143420357
+      Purple10: 990063014
+      Purple11: 852679086
+      Purple12: -323652033
+      Purple2: -8574617533588215047
+      Purple3: 1146377161823449664
+      Purple4: 313031042183868055
+      Purple5: 726792114961198850
+      Purple6: -1772910997170728470
+      Purple7: 1735509525
+      Purple8: -1381260974
+      Purple9: -1534599114
+      PurpleHot1: -5795050159776370831
+      PurpleHot10: -315539394
+      PurpleHot11: 352719277
+      PurpleHot12: 312389965
+      PurpleHot2: -2153206033527350422
+      PurpleHot3: -7750713066517313670
+      PurpleHot4: 4975759837261278858
+      PurpleHot5: -389052282320799771
+      PurpleHot6: -582989011194290838
+      PurpleHot7: 1527077080
+      PurpleHot8: 1870859960
+      PurpleHot9: -1486991402
+      Red1: -5734888567148846429
+      Red10: 6364326815875859551
+      Red11: -8198835691805668717
+      Red12: -3132268299360007054
+      Red2: 6442685787483345789
+      Red3: 3951699593749594473
+      Red4: 5250969652922867143
+      Red5: -5977901536441460568
+      Red6: -2680639105447243493
+      Red7: 2346044781097903242
+      Red8: -7397092174548774909
+      Red9: 9073635787249815755
+      RedHot1: 9101191058906655149
+      RedHot10: -3616957574958058786
+      RedHot11: 3840544798913511443
+      RedHot12: 510091042352424385
+      RedHot2: -8417778383946691058
+      RedHot3: 8826417575303049200
+      RedHot4: -2666029378307341424
+      RedHot5: 4756691215923834970
+      RedHot6: -3072846198397213901
+      RedHot7: -1676374361101574319
+      RedHot8: -3171362460986254349
+      RedHot9: -1558683156116260682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

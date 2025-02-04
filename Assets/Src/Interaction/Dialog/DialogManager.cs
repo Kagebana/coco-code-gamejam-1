@@ -20,7 +20,6 @@ namespace Src.Interaction.Dialog
         private bool _isTyping;
         private CancellationTokenSource _cancellationTokenSource;
 
-
         private TopDownController _characterController;
         private PlayerInput _playerInput;
         private AudioSource _audioSource;
@@ -28,30 +27,12 @@ namespace Src.Interaction.Dialog
         private void Awake()
         {
             _characterController = FindAnyObjectByType<TopDownController>();
-            _audioSource = GetComponent<AudioSource>();
-        }
-
-        private void OnEnable()
-        {
             _playerInput = FindAnyObjectByType<PlayerInput>();
-            _playerInput.actions["Interact"].started += OnInteract;
-        }
-
-        private void OnDisable()
-        {
-            if (!_playerInput)
-            {
-                return;
-            }
-
-            _playerInput.actions["Interact"].started -= OnInteract;
-
-            CancelTypingTask();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public void StartDialogue(string[] lines, AudioClip textClip)
         {
-            _dialogBox.SetActive(true);
             _lines = lines;
             _index = 0;
 
@@ -59,6 +40,10 @@ namespace Src.Interaction.Dialog
 
             _dialogText.text = "";
             _audioSource.clip = textClip;
+
+            _dialogBox.SetActive(true);
+
+            _playerInput.actions["Interact"].started += OnInteract;
 
             _cancellationTokenSource = new CancellationTokenSource();
             _ = TypeLineAsync(_cancellationTokenSource.Token);
@@ -87,6 +72,7 @@ namespace Src.Interaction.Dialog
                 }
                 else
                 {
+                    _playerInput.actions["Interact"].started -= OnInteract;
                     _dialogBox.SetActive(false);
                     _characterController.CanControl = true;
                     _index = 0;
