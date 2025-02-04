@@ -16,13 +16,13 @@ namespace Src.Interaction.Inventory
             _audioSource = GetComponent<AudioSource>();
         }
 
-        public InventoryStates InventoryStates { get; private set; } = InventoryStates.Empty;
+        public InventoryStates InventoryState { get; private set; } = InventoryStates.Empty;
 
         public void ChangeSlot(InventoryStates inventoryState)
         {
-            InventoryStates = inventoryState;
+            InventoryState = inventoryState;
 
-            _slot.sprite = InventoryStates switch
+            _slot.sprite = InventoryState switch
             {
                 InventoryStates.Empty => null,
                 InventoryStates.White => _ingredients[0],
