@@ -3055,10 +3055,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0026041667
+    x: 0
     y: 0
-    width: 0.33638397
-    height: 0.3361111
+    width: 1
+    height: 0.9991889
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -9896,8 +9896,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1659503794}
   - component: {fileID: 1659503795}
-  - component: {fileID: 1659503797}
   - component: {fileID: 1659503798}
+  - component: {fileID: 1659503797}
+  - component: {fileID: 1659503799}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -10000,6 +10001,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.35}
   m_Size: {x: 0.35, y: 0.1}
   m_Direction: 1
+--- !u!114 &1659503799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659503793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343d063587c564a46bb7eee24a6ff28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterAnimator: {fileID: 1849833845}
 --- !u!1 &1666325602
 GameObject:
   m_ObjectHideFlags: 0
