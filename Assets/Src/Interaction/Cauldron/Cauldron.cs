@@ -9,11 +9,11 @@ namespace Src.Interaction.Cauldron
 {
     public class Cauldron : MonoBehaviour, IInteractable
     {
-        private static readonly int s_baseIngredient = Animator.StringToHash("BaseIngredient");
-        private static readonly int s_addedIngredient = Animator.StringToHash("AddedIngredient");
-        private static readonly int s_poison = Animator.StringToHash("Poison");
-        private static readonly int s_superPoison = Animator.StringToHash("SuperPoison");
-        private static readonly int s_potionTaken = Animator.StringToHash("PotionTaken");
+        private static readonly int BaseIngredient = Animator.StringToHash("BaseIngredient");
+        private static readonly int AddedIngredient = Animator.StringToHash("AddedIngredient");
+        private static readonly int Poison = Animator.StringToHash("Poison");
+        private static readonly int SuperPoison = Animator.StringToHash("SuperPoison");
+        private static readonly int PotionTaken = Animator.StringToHash("PotionTaken");
 
         private readonly List<InventoryStates> _currentIngredients = new();
 
@@ -74,7 +74,7 @@ namespace Src.Interaction.Cauldron
                 {
                     CanUse = false;
                     _characterInventory.ChangeSlot(InventoryStates.Empty);
-                    _animator.SetTrigger(s_baseIngredient);
+                    _animator.SetTrigger(BaseIngredient);
                     _cauldronState = CauldronStates.Ready;
                     return;
                 }
@@ -101,7 +101,7 @@ namespace Src.Interaction.Cauldron
             {
                 if (_currentIngredients.Count == _poisonRecipe.Length)
                 {
-                    _animator.SetTrigger(s_poison);
+                    _animator.SetTrigger(Poison);
                     _cauldronState = CauldronStates.Potion;
                     return;
                 }
@@ -110,7 +110,7 @@ namespace Src.Interaction.Cauldron
             {
                 if (_currentIngredients.Count == _extraPoisonRecipe.Length)
                 {
-                    _animator.SetTrigger(s_superPoison);
+                    _animator.SetTrigger(SuperPoison);
                     _cauldronState = CauldronStates.Potion;
                     return;
                 }
@@ -121,7 +121,7 @@ namespace Src.Interaction.Cauldron
                 return;
             }
 
-            _animator.SetTrigger(s_addedIngredient);
+            _animator.SetTrigger(AddedIngredient);
         }
 
         private void TakePotion()
@@ -136,7 +136,7 @@ namespace Src.Interaction.Cauldron
                     ? InventoryStates.Poison
                     : InventoryStates.ExtraPoison);
 
-            _animator.SetTrigger(s_potionTaken);
+            _animator.SetTrigger(PotionTaken);
             _currentIngredients.Clear();
             _cauldronState = CauldronStates.Wait;
         }
