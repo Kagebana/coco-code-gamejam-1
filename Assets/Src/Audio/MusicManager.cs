@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Src.Audio
@@ -19,8 +20,23 @@ namespace Src.Audio
 
         private void Start()
         {
-            _audioSource.clip = _game;
-            _audioSource.loop = true;
+            ChangeMusic(MusicState.Game, true);
+        }
+
+        public void ChangeMusic(MusicState state, bool loop)
+        {
+            _audioSource.Stop();
+
+            _audioSource.clip = state switch
+            {
+                MusicState.Menu => _menu,
+                MusicState.Game => _game,
+                MusicState.Sleep => _sleep,
+                MusicState.Death => _death,
+                _ => throw new ArgumentOutOfRangeException(nameof(state), state, null)
+            };
+
+            _audioSource.loop = loop;
             _audioSource.Play();
         }
     }
