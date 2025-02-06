@@ -36,7 +36,7 @@ namespace Src.Interaction.Cauldron
         private void Awake()
         {
             _characterController = FindFirstObjectByType<TopDownController>();
-            _characterInventory = FindFirstObjectByType<Inventory.Inventory>();
+            _characterInventory = FindFirstObjectByType<Inventory.Inventory>(FindObjectsInactive.Include);
             _characterDeath = FindFirstObjectByType<WitchDeath>();
         }
 

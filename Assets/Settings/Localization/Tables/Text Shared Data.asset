@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Text
+  m_TableCollectionNameGuidString: 0942d88cecd938a4389643f525586ed3
+  m_Entries:
+  - m_Id: 98056589312
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145863266304
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195792261120
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1885044002816
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3515051200512
+    m_Key: Credits info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4156028932096
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4317257977856
+    m_Key: Localization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4451538620416
+    m_Key: Skip tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14226020159488
+    m_Key: I lost my kitchen keys.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14319691550720
+    m_Key: Now I have to cook in the cauldron.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14420891717632
+    m_Key: It's life-threatening.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14533500391424
+    m_Key: I wanted to enclose each room with its own door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14682314297344
+    m_Key: But when installing the lever on this door, the lever broke.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14777474666496
+    m_Key: I just came from there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14822445993984
+    m_Key: It's a dead end that way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14962154065920
+    m_Key: And only a field of golden flowers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15175547670528
+    m_Key: There used to be a staircase here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15287908880384
+    m_Key: But the floor was more important to me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15353096753152
+    m_Key: The basement collapsed anyway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18997590413312
+    m_Key: "Wow, you actually did it! Alright, let\u2019s see\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19115190308864
+    m_Key: "\u2026Are you serious? This was supposed to work?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19214108774400
+    m_Key: "Oh, of course! Maybe if we water it down a little more, it\u2019ll be
+      completely useless!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19376923267072
+    m_Key: "Eh, whatever\u2026 Mistakes should be corrected <color=black>immediately</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20760766763008
+    m_Key: Hey, kid. You out here all alone, or am I just seeing things?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20884641337344
+    m_Key: "Then again\u2026 who\u2019d you even expect to keep you company? That
+      scrawny rat over there?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20968762298368
+    m_Key: "Heh\u2026 though, who knows, maybe it\u2019s brewing potions too."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21044993773568
+    m_Key: "So, word is - you\u2019re not much of a cook, but you sure know how to
+      poison."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21147838107648
+    m_Key: "That\u2019s good. I like people who know how to impress guests right
+      away."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21213034369024
+    m_Key: "But tell me honestly - are you sure you know what you\u2019re doing?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21266385915904
+    m_Key: Or are you just tossing stuff in until something explodes?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21321780088832
+    m_Key: "Alright, alright, don\u2019t get mad. It\u2019s simple. You\u2019ve got
+      recipes. Two, to be exact. One\u2019s weak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21461035175936
+    m_Key: "The other\u2026 well, let\u2019s just say it doesn\u2019t leave many
+      witnesses."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21552802353152
+    m_Key: It all starts with a <color=yellow>golden</color> flower.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21711212826624
+    m_Key: The order matters. <color=red>Red</color>, <color=purple>purple</color>,
+      <color=green>green</color>, <color=green>green</color> - it all has meaning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22213619142656
+    m_Key: "But here\u2019s the fun part\u2026 if you mess up\u2026 heh-heh\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22271290822656
+    m_Key: "You\u2019ll be the first to taste your own brew."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22362558877696
+    m_Key: "And trust me, that\u2019s not a compliment to the chef."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22450073030656
+    m_Key: "Now, be a good little witch and whip me up something\u2026 classic. Just
+      a regular poison."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22573486231552
+    m_Key: "No surprises, alright? I\u2019ve got plans tonight."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23873179406336
+    m_Key: "Heh-heh\u2026 well, would you look at that. You actually pulled it off."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23952330117120
+    m_Key: "And here I was, thinking I\u2019d have to gather the ingredients myself."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24012199612416
+    m_Key: "And y\u2019know\u2026 I wasn\u2019t really in the mood."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24067086274560
+    m_Key: "Gotta say, it smells\u2026 hmm\u2026 promising. Not too sharp, not too
+      weak. Just right."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24130269270016
+    m_Key: "I see you know how to listen. That\u2019s a rare skill, y\u2019know."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24181741768704
+    m_Key: "So tell me\u2026 how does it feel? Making poison? Knowing that every
+      drop is someone\u2019s last breath?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24284699348992
+    m_Key: "That with just a flick of your finger\u2026 you could decide someone
+      else\u2019s fate?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24356174483456
+    m_Key: "\u2026Eh, don\u2019t think too hard about it. I\u2019m just messing with
+      ya. Really."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24413938438144
+    m_Key: "Either way, you did good. This was\u2026 interesting. Maybe I\u2019ll
+      drop by again sometime."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24478832709632
+    m_Key: "Or maybe\u2026 you\u2019ll wish I hadn\u2019t."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28612554182656
+    m_Key: HEY, YOU!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28690794729472
+    m_Key: THINK YOU CAN JUST WALTZ IN HERE AND BREW THE STRONGEST POISON?! HA!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28807895502848
+    m_Key: "THIS ISN\u2019T JUST A BREW - THIS IS A TRIAL!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28916595085312
+    m_Key: ONLY THOSE WHO CAN STAND THE HEAT DESERVE TO COMMAND THIS POWER!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29206673149952
+    m_Key: "LISTEN CLOSELY! YOU CAN\u2019T JUST THROW INGREDIENTS AROUND LIKE SOME
+      FOOLISH GOBLIN!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29277070348288
+    m_Key: NO! YOU HAVE TO BE PRECISE! STRATEGIC!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29426349821952
+    m_Key: VICTORY ONLY BELONGS TO THOSE WHO FOLLOW THE RIGHT PLAN!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29490887577600
+    m_Key: <color=purple>PURPLE</color>, <color=red>RED</color>, <color=red>RED</color>,
+      <color=purple>PURPLE</color>, <color=green>GREEN</color>!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29768013631488
+    m_Key: "IF YOU DO EVERYTHING RIGHT - YOU\u2019LL CREATE THE STRONGEST POISON,
+      CAPABLE OF BRINGING DOWN ANYONE!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29875933073408
+    m_Key: "BUT IF YOU MESS UP\u2026 YOU\u2019LL BE ITS FIRST VICTIM!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29970845978624
+    m_Key: "NOW GO! SHOW ME YOU\u2019RE NOT SOME WEAKLING! BREW THAT POISON!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30641087369216
+    m_Key: "HAHAHAHA! NOW THAT\u2019S WHAT I\u2019M TALKING ABOUT!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30895539015680
+    m_Key: YOU DID IT! A TRUE, POWERFUL, UNSTOPPABLE POISON!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30975570530304
+    m_Key: "THIS IS LIKE A TRUE BATTLE ELIXIR! IF THIS FALLS INTO THE WRONG HANDS\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31037621063680
+    m_Key: "HA, WHO AM I KIDDING?! THEY WON\u2019T SURVIVE!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31095624093696
+    m_Key: "YOU\u2019RE DOING GREAT. BUT REMEMBER - THIS ISN\u2019T A GAME!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31194479644672
+    m_Key: "THE POWER YOU CREATE - IT\u2019S A RESPONSIBILITY! DON\u2019T LET IT
+      GO TO WASTE!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31275182247936
+    m_Key: GOOD JOB. IF I EVER NEED MORE POISON - NOW I KNOW WHO TO CALL!
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 54141200453075206
+  references:
+    version: 2
+    RefIds:
+    - rid: 54141200453075206
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1738850477711

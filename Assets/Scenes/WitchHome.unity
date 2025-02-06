@@ -652,6 +652,7 @@ GameObject:
   - component: {fileID: 86753018}
   - component: {fileID: 86753020}
   - component: {fileID: 86753019}
+  - component: {fileID: 86753021}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -777,6 +778,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86753017}
   m_CullTransparentMesh: 1
+--- !u!114 &86753021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86753017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 4317257977856
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 86753019}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &89350586
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +829,7 @@ GameObject:
   - component: {fileID: 89350587}
   - component: {fileID: 89350589}
   - component: {fileID: 89350588}
+  - component: {fileID: 89350590}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -913,6 +955,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89350586}
   m_CullTransparentMesh: 1
+--- !u!114 &89350590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89350586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 145863266304
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 89350588}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &123486035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,6 +2214,34 @@ MonoBehaviour:
   - There used to be a staircase here.
   - But the floor was more important to me.
   - The basement collapsed anyway.
+  _localizedDialogueKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 15175547670528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 15287908880384
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 15353096753152
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &226719163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3625,34 @@ MonoBehaviour:
   - I lost my kitchen keys.
   - Now I have to cook in the cauldron.
   - It's life-threatening.
+  _localizedDialogueKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14226020159488
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14319691550720
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14420891717632
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &362649816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,7 +3822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -140}
+  m_AnchoredPosition: {x: 10, y: -150}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &375082547
@@ -3877,6 +4015,34 @@ MonoBehaviour:
   - I just came from there.
   - It's a dead end that way.
   - And only a field of golden flowers.
+  _localizedDialogueKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14777474666496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14822445993984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14962154065920
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &422256230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,6 +4133,7 @@ GameObject:
   - component: {fileID: 518852581}
   - component: {fileID: 518852583}
   - component: {fileID: 518852582}
+  - component: {fileID: 518852584}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4013,7 +4180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip training
+  m_text: Skip tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c72f3ee2ce609b43a71d5070c862d00, type: 2}
   m_sharedMaterial: {fileID: 8204428141544286819, guid: 9c72f3ee2ce609b43a71d5070c862d00, type: 2}
@@ -4092,6 +4259,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518852580}
   m_CullTransparentMesh: 1
+--- !u!114 &518852584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518852580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 4451538620416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 518852582}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,7 +4402,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 0.9991889
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -4391,6 +4598,135 @@ MonoBehaviour:
   - "Now, be a good little witch and whip me up something\u2026 classic. Just a regular
     poison."
   - "No surprises, alright? I\u2019ve got plans tonight."
+  _localizedPoisonTutorialKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 20760766763008
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 20884641337344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 20968762298368
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21044993773568
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21147838107648
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21213034369024
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21266385915904
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21321780088832
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21461035175936
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21552802353152
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 21711212826624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 22213619142656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 22271290822656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 22362558877696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 22450073030656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 22573486231552
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _poisonTutorialFinishLines:
   - "Heh-heh\u2026 well, would you look at that. You actually pulled it off."
   - "And here I was, thinking I\u2019d have to gather the ingredients myself."
@@ -4407,6 +4743,87 @@ MonoBehaviour:
   - "Either way, you did good. This was\u2026 interesting. Maybe I\u2019ll drop by
     again sometime."
   - "Or maybe\u2026 you\u2019ll wish I hadn\u2019t."
+  _localizedPoisonTutorialFinishKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 23873179406336
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 23952330117120
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24012199612416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24067086274560
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24130269270016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24181741768704
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24284699348992
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24356174483456
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24413938438144
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 24478832709632
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _extraPoisonTutorialLines:
   - HEY, YOU!
   - THINK YOU CAN JUST WALTZ IN HERE AND BREW THE STRONGEST POISON?! HA!
@@ -4422,6 +4839,95 @@ MonoBehaviour:
     OF BRINGING DOWN ANYONE!"
   - "BUT IF YOU MESS UP\u2026 YOU\u2019LL BE ITS FIRST VICTIM!"
   - "NOW GO! SHOW ME YOU\u2019RE NOT SOME WEAKLING! BREW THAT POISON!"
+  _localizedExtraPoisonTutorialKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 28612554182656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 28690794729472
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 28807895502848
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 28916595085312
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29206673149952
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29277070348288
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29426349821952
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29490887577600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29768013631488
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29875933073408
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 29970845978624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _extraPoisonTutorialFinishLines:
   - "HAHAHAHA! NOW THAT\u2019S WHAT I\u2019M TALKING ABOUT!"
   - YOU DID IT! A TRUE, POWERFUL, UNSTOPPABLE POISON!
@@ -4430,12 +4936,102 @@ MonoBehaviour:
   - "YOU\u2019RE DOING GREAT. BUT REMEMBER - THIS ISN\u2019T A GAME!"
   - "THE POWER YOU CREATE - IT\u2019S A RESPONSIBILITY! DON\u2019T LET IT GO TO WASTE!"
   - GOOD JOB. IF I EVER NEED MORE POISON - NOW I KNOW WHO TO CALL!
+  _localizedExtraPoisonTutorialFinishKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 30641087369216
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 30895539015680
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 30975570530304
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 31037621063680
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 31095624093696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 31194479644672
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 31275182247936
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _failFinishLines:
   - "Wow, you actually did it! Alright, let\u2019s see\u2026"
   - "\u2026Are you serious? This was supposed to work?"
   - "Oh, of course! Maybe if we water it down a little more, it\u2019ll be completely
     useless!"
   - "Eh, whatever\u2026 Mistakes should be corrected <color=black>immediately</color>."
+  _localizedFailFinishKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 18997590413312
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 19115190308864
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 19214108774400
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 19376923267072
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _poisonDialogues:
   - Lines:
     - "A poison, huh? Hm. I\u2019ve had worse contracts. But if it's needed, someone
@@ -4465,6 +5061,7 @@ MonoBehaviour:
   - Lines:
     - The weak do not deserve power. Give me poison, and I will cleanse the world
       of them.
+  _localizedPoisonKeys: []
   _poisonFinishDialogues:
   - Lines:
     - Strong. Pure. No unnecessary additives. If they die quickly, you did well.
@@ -4490,6 +5087,7 @@ MonoBehaviour:
     - Man, this is sick! You really know your stuff!
   - Lines:
     - A painless death. Elegant. You exceeded my expectations.
+  _localizedPoisonFinishKeys: []
   _extraPoisonDialogues:
   - Lines:
     - "\u2026Do you feel it? The stench of weakness clings to this world. It has
@@ -4523,6 +5121,7 @@ MonoBehaviour:
       that only the strong survive."
   - Lines:
     - Progress demands sacrifice. Give me a poison that will clear the path to perfection.
+  _localizedExtraPoisonKeys: []
   _extraPoisonFinishDialogues:
   - Lines:
     - "Hmm\u2026 This poison\u2026 It carries pure destruction. Good work. The world
@@ -4547,6 +5146,10 @@ MonoBehaviour:
     - HAHA! I approve. You have proven your worth.
   - Lines:
     - "Excellent\u2026 This poison is a step toward a greater future."
+  _localizedExtraPoisonFinishKeys: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &614759261
 GameObject:
   m_ObjectHideFlags: 0
@@ -4661,6 +5264,7 @@ GameObject:
   - component: {fileID: 616769808}
   - component: {fileID: 616769810}
   - component: {fileID: 616769809}
+  - component: {fileID: 616769811}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4786,6 +5390,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616769807}
   m_CullTransparentMesh: 1
+--- !u!114 &616769811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616769807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 195792261120
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 616769809}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +5525,7 @@ GameObject:
   - component: {fileID: 664139124}
   - component: {fileID: 664139126}
   - component: {fileID: 664139125}
+  - component: {fileID: 664139127}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5006,6 +5651,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664139123}
   m_CullTransparentMesh: 1
+--- !u!114 &664139127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664139123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 4156028932096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 664139125}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &723853341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,6 +5786,26 @@ MonoBehaviour:
   _dialogueLines:
   - I wanted to enclose each room with its own door.
   - But when installing the lever on this door, the lever broke.
+  _localizedDialogueKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14533500391424
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 14682314297344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &800630840
 GameObject:
   m_ObjectHideFlags: 0
@@ -7387,6 +8092,7 @@ GameObject:
   - component: {fileID: 972374107}
   - component: {fileID: 972374109}
   - component: {fileID: 972374108}
+  - component: {fileID: 972374110}
   m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
@@ -7538,6 +8244,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972374106}
   m_CullTransparentMesh: 1
+--- !u!114 &972374110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972374106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 3515051200512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 972374108}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &984231916
 GameObject:
   m_ObjectHideFlags: 0
@@ -7620,7 +8366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 984231919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039584829}
+        m_TargetAssemblyTypeName: Src.Localization.LanguageSwitcher, Assembly-CSharp
+        m_MethodName: SetLanguage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7d91ab7f5768aaf468dbbc4cb0874534, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Localization.Locale, Unity.Localization
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &984231919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,6 +9227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1039584828}
+  - component: {fileID: 1039584829}
   m_Layer: 5
   m_Name: Localization
   m_TagString: Untagged
@@ -8497,6 +9256,18 @@ RectTransform:
   m_AnchoredPosition: {x: 275, y: -115.566666}
   m_SizeDelta: {x: 100, y: 73.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1039584829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039584827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97fb19de4512c141923884616699335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052702488
 GameObject:
   m_ObjectHideFlags: 0
@@ -9501,7 +10272,6 @@ Transform:
   - {fileID: 65420548}
   - {fileID: 545246336}
   - {fileID: 288055324}
-  - {fileID: 1515826489}
   - {fileID: 123486036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11564,6 +12334,7 @@ GameObject:
   - component: {fileID: 1386775651}
   - component: {fileID: 1386775653}
   - component: {fileID: 1386775652}
+  - component: {fileID: 1386775654}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11689,6 +12460,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386775650}
   m_CullTransparentMesh: 1
+--- !u!114 &1386775654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386775650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 1885044002816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1386775652}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1413378822
 GameObject:
   m_ObjectHideFlags: 0
@@ -11700,6 +12511,7 @@ GameObject:
   - component: {fileID: 1413378823}
   - component: {fileID: 1413378825}
   - component: {fileID: 1413378824}
+  - component: {fileID: 1413378826}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11825,6 +12637,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413378822}
   m_CullTransparentMesh: 1
+--- !u!114 &1413378826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413378822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 98056589312
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1413378824}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1425521169
 GameObject:
   m_ObjectHideFlags: 0
@@ -12140,84 +12992,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 288055324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1515826488
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1515826489}
-  - component: {fileID: 1515826490}
-  m_Layer: 3
-  m_Name: Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1515826489
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515826488}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1123748147}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1515826490
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515826488}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.2}
-  m_EdgeRadius: 0
 --- !u!1 &1536461251
 GameObject:
   m_ObjectHideFlags: 0
@@ -13691,6 +14465,7 @@ GameObject:
   - component: {fileID: 1798337688}
   - component: {fileID: 1798337690}
   - component: {fileID: 1798337689}
+  - component: {fileID: 1798337691}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -13816,6 +14591,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798337687}
   m_CullTransparentMesh: 1
+--- !u!114 &1798337691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798337687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 4156028932096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1798337689}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1798501600
 GameObject:
   m_ObjectHideFlags: 0
@@ -15679,7 +16494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2124929350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039584829}
+        m_TargetAssemblyTypeName: Src.Localization.LanguageSwitcher, Assembly-CSharp
+        m_MethodName: SetLanguage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 572334ddd0ecf9540baad635dc733d13, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Localization.Locale, Unity.Localization
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2124929350
 MonoBehaviour:
   m_ObjectHideFlags: 0
