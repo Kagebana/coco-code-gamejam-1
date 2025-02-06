@@ -1,4 +1,5 @@
 using Src.Audio;
+using Src.Interaction.Dialog.Orders;
 using Src.Interaction.Enter;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace Src.UI
 		private GameObject _currentButton;
 		private MusicManager _musicManager;
 		private Enter _enter;
+		private Orders _orders;
 
 		private void Awake()
 		{
@@ -30,12 +32,14 @@ namespace Src.UI
 			_currentButton = _mainMenuButton;
 			_musicManager = FindAnyObjectByType<MusicManager>();
 			_enter = FindAnyObjectByType<Enter>();
+			_orders = FindAnyObjectByType<Orders>();
 		}
 
 		private void OnEnable()
 		{
 			_playerInput = FindAnyObjectByType<PlayerInput>();
 			_playerInput.actions["Navigate"].performed += ReturnFocus;
+			_orders.OnExtraPoisonTutorialFinished += ChangeSkipTutorial;
 		}
 
 		private void Start()
@@ -46,6 +50,8 @@ namespace Src.UI
 
 		private void OnDisable()
 		{
+			_orders.OnExtraPoisonTutorialFinished -= ChangeSkipTutorial;
+			
 			if (!_playerInput)
 			{
 				return;

@@ -62,6 +62,11 @@ namespace Src.Interaction.Dialog.Orders
             _menu = FindAnyObjectByType<Menu>();
         }
 
+        public Action OnPoisonTutorialStarted;
+        public Action OnPoisonTutorialFinished;
+        public Action OnExtraPoisonTutorialStarted;
+        public Action OnExtraPoisonTutorialFinished;
+
         public void Use()
         {
             if (FailureCheck())
@@ -145,6 +150,7 @@ namespace Src.Interaction.Dialog.Orders
                     LoadLocalizedDialogue(_localizedPoisonTutorialKeys, _poisonTutorialLines);
                     _dialogManager.StartDialogue(_poisonTutorialLines, _poisonTutorialClip);
                     _orderState = OrderStates.Poison;
+                    OnPoisonTutorialStarted?.Invoke();
                     return;
                 case false when _orderState == OrderStates.Poison &&
                                 _characterInventory.InventoryState == InventoryStates.Poison:
@@ -153,6 +159,7 @@ namespace Src.Interaction.Dialog.Orders
                     _dialogManager.StartDialogue(_poisonTutorialFinishLines, _poisonTutorialClip);
                     _tutorialPoison = true;
                     _orderState = OrderStates.NotTaken;
+                    OnPoisonTutorialFinished?.Invoke();
                     return;
                 case false:
                     _characterController.CanControl = true;
@@ -169,6 +176,7 @@ namespace Src.Interaction.Dialog.Orders
                     LoadLocalizedDialogue(_localizedExtraPoisonTutorialKeys, _extraPoisonTutorialLines);
                     _dialogManager.StartDialogue(_extraPoisonTutorialLines, _extraPoisonTutorialClip);
                     _orderState = OrderStates.ExtraPoison;
+                    OnExtraPoisonTutorialStarted?.Invoke();
                     return;
                 case false when _orderState == OrderStates.ExtraPoison &&
                                 _characterInventory.InventoryState == InventoryStates.ExtraPoison:
@@ -177,6 +185,7 @@ namespace Src.Interaction.Dialog.Orders
                     _dialogManager.StartDialogue(_extraPoisonTutorialFinishLines, _extraPoisonTutorialClip);
                     _tutorialExtraPoison = true;
                     _orderState = OrderStates.NotTaken;
+                    OnExtraPoisonTutorialFinished?.Invoke();
                     return;
                 case false:
                     _characterController.CanControl = true;

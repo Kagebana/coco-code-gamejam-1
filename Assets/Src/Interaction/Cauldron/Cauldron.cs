@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Src.Control;
@@ -40,6 +41,10 @@ namespace Src.Interaction.Cauldron
             _characterDeath = FindFirstObjectByType<WitchDeath>();
         }
 
+        public Action OnIngredientAdded;
+        public Action OnPoisonBrewed;
+        public Action OnPoisonTaken;
+
         private bool CanUse { get; set; }
 
         public void AllowUse()
@@ -59,6 +64,7 @@ namespace Src.Interaction.Cauldron
             if (_cauldronState == CauldronStates.Potion)
             {
                 TakePotion();
+                OnPoisonTaken?.Invoke();
                 return;
             }
 
@@ -76,6 +82,7 @@ namespace Src.Interaction.Cauldron
                     _characterInventory.ChangeSlot(InventoryStates.Empty);
                     _animator.SetTrigger(BaseIngredient);
                     _cauldronState = CauldronStates.Ready;
+                    OnIngredientAdded?.Invoke();
                     return;
                 }
             }
@@ -103,6 +110,7 @@ namespace Src.Interaction.Cauldron
                 {
                     _animator.SetTrigger(Poison);
                     _cauldronState = CauldronStates.Potion;
+                    OnPoisonBrewed?.Invoke();
                     return;
                 }
             }
@@ -112,6 +120,7 @@ namespace Src.Interaction.Cauldron
                 {
                     _animator.SetTrigger(SuperPoison);
                     _cauldronState = CauldronStates.Potion;
+                    OnPoisonBrewed?.Invoke();
                     return;
                 }
             }
@@ -122,6 +131,7 @@ namespace Src.Interaction.Cauldron
             }
 
             _animator.SetTrigger(AddedIngredient);
+            OnIngredientAdded?.Invoke();
         }
 
         private void TakePotion()

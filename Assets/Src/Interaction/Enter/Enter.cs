@@ -1,6 +1,6 @@
+using System;
 using System.Threading.Tasks;
 using Src.Audio;
-using Src.Common;
 using Src.Control;
 using UnityEngine;
 
@@ -24,6 +24,8 @@ namespace Src.Interaction.Enter
 			_musicManager = FindFirstObjectByType<MusicManager>();
 		}
 
+		public Action OnStarted;
+
 		public async void ToStart()
 		{
 			_characterRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
@@ -34,6 +36,7 @@ namespace Src.Interaction.Enter
 			_inventory.gameObject.SetActive(true);
 			_characterRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
 			_characterController.CanControl = true;
+			OnStarted?.Invoke();
 		}
 
 		private async Task MoveToPointAsync(Transform point)
