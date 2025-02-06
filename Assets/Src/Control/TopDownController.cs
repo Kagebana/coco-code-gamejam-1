@@ -50,7 +50,7 @@ namespace Src.Control
 			ChangeAnimationToRun(Direction);
 		}
 
-		public bool CanControl { get; set; } = true;
+		public bool CanControl { get; set; }
 		public Vector2 Direction { get; set; } = Vector2.zero;
 
 		private void Move(InputAction.CallbackContext callbackContext)

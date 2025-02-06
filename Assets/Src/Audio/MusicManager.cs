@@ -18,11 +18,6 @@ namespace Src.Audio
 			_audioSource = GetComponent<AudioSource>();
 		}
 
-		private void Start()
-		{
-			ChangeMusic(MusicState.Game, true);
-		}
-
 		public void ChangeMusic(MusicState state, bool loop)
 		{
 			_audioSource.Stop();

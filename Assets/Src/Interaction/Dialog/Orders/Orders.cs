@@ -3,6 +3,7 @@ using Src.Audio;
 using Src.Control;
 using Src.Interaction.Death;
 using Src.Interaction.Inventory;
+using Src.UI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -37,6 +38,7 @@ namespace Src.Interaction.Dialog.Orders
 		private int _currentDialogId;
 		private AudioClip _currentClip;
 		private MusicManager _musicManager;
+		private Menu _menu;
 
 		private void Awake()
 		{
@@ -46,6 +48,7 @@ namespace Src.Interaction.Dialog.Orders
 			_witchDeath = FindAnyObjectByType<WitchDeath>();
 			_musicManager = FindAnyObjectByType<MusicManager>();
 			_currentClip = GetRandomElement(_poisonClip);
+			_menu = FindAnyObjectByType<Menu>();
 		}
 
 		public void Use()
@@ -55,26 +58,29 @@ namespace Src.Interaction.Dialog.Orders
 				return;
 			}
 
-			if (!_tutorialPoison)
+			if (!_menu.SkipTutorial)
 			{
-				PoisonTutorial();
-				if (_orderState == OrderStates.NotTaken)
+				if (!_tutorialPoison)
 				{
-					_characterController.CanControl = true;
+					PoisonTutorial();
+					if (_orderState == OrderStates.NotTaken)
+					{
+						_characterController.CanControl = true;
+					}
+
+					return;
 				}
 
-				return;
-			}
-
-			if (!_tutorialExtraPoison)
-			{
-				ExtraPoisonTutorial();
-				if (_orderState == OrderStates.NotTaken)
+				if (!_tutorialExtraPoison)
 				{
-					_characterController.CanControl = true;
-				}
+					ExtraPoisonTutorial();
+					if (_orderState == OrderStates.NotTaken)
+					{
+						_characterController.CanControl = true;
+					}
 
-				return;
+					return;
+				}
 			}
 
 			CycleOrders();
