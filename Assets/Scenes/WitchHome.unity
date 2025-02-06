@@ -3088,7 +3088,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 0.9991889
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3256,6 +3256,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _poisonTutorialClip: {fileID: 8300000, guid: b7bf479669777f4489f6eec1a7ddf44c, type: 3}
   _extraPoisonTutorialClip: {fileID: 8300000, guid: e93f95f8583863641b53f0ab5dacccc5, type: 3}
+  _poisonClip:
+  - {fileID: 8300000, guid: 28ee3f06f82a1f24db0b820c3dd063d9, type: 3}
+  - {fileID: 8300000, guid: 15300511446aaab459d7de7269dcda51, type: 3}
+  - {fileID: 8300000, guid: b7bf479669777f4489f6eec1a7ddf44c, type: 3}
+  - {fileID: 8300000, guid: 49efacdeb2898a04c92eaedd11ed322c, type: 3}
+  - {fileID: 8300000, guid: e93f95f8583863641b53f0ab5dacccc5, type: 3}
   _poisonTutorialLines:
   - Hey, kid. You out here all alone, or am I just seeing things?
   - "Then again\u2026 who\u2019d you even expect to keep you company? That scrawny
@@ -3316,6 +3322,123 @@ MonoBehaviour:
   - "YOU\u2019RE DOING GREAT. BUT REMEMBER - THIS ISN\u2019T A GAME!"
   - "THE POWER YOU CREATE - IT\u2019S A RESPONSIBILITY! DON\u2019T LET IT GO TO WASTE!"
   - GOOD JOB. IF I EVER NEED MORE POISON - NOW I KNOW WHO TO CALL!
+  _failFinishLines:
+  - "Wow, you actually did it! Alright, let\u2019s see\u2026"
+  - "\u2026Are you serious? This was supposed to work?"
+  - "Oh, of course! Maybe if we water it down a little more, it\u2019ll be completely
+    useless!"
+  - "Eh, whatever\u2026 Mistakes should be corrected <color=black>immediately</color>."
+  _poisonDialogues:
+  - Lines:
+    - "A poison, huh? Hm. I\u2019ve had worse contracts. But if it's needed, someone
+      must\u2019ve earned it. Brew it."
+  - Lines:
+    - "I need something\u2026 discreet. Something that does its job before anyone
+      even realizes. Can you handle that?"
+  - Lines:
+    - "Oh, poison! What a\u2026 sophisticated tool. Why get our hands dirty when
+      we can resolve things elegantly, right?"
+  - Lines:
+    - "Death by poison is checkmate without noise or blood. The enemy won\u2019t
+      realize their loss until it\u2019s too late. Ready?"
+  - Lines:
+    - "In this world, only the fastest survive. Give me poison, and I\u2019ll make
+      sure no one even has time to blink."
+  - Lines:
+    - Some things are better done quietly. Can you handle it?
+  - Lines:
+    - "You know, sometimes it\u2019s easier to get rid of someone without all the
+      noise. You know how to make that happen?"
+  - Lines:
+    - I prefer silent methods. Will your poison do?
+  - Lines:
+    - "Hey, I need somethin\u2019\u2026 y\u2019know, that does the job without all
+      the noise. Got it?"
+  - Lines:
+    - The weak do not deserve power. Give me poison, and I will cleanse the world
+      of them.
+  _poisonFinishDialogues:
+  - Lines:
+    - Strong. Pure. No unnecessary additives. If they die quickly, you did well.
+      Stay safe.
+  - Lines:
+    - "Excellent work, a Phantom Thief would approve. Now\u2026 I vanish as silently
+      as I came."
+  - Lines:
+    - "You exceeded my expectations! This\u2026 is perfect. Maybe next time, you\u2019ll
+      make something even more exquisite?"
+  - Lines:
+    - "Magnificent. You created a tool that ends everything in one move. Now\u2026
+      the game is over."
+  - Lines:
+    - "Precise. Clean. Just as it should be. You\u2019ve impressed me, gunslinger."
+  - Lines:
+    - You just made the right decision for the whole galaxy. Good work, soldier.
+  - Lines:
+    - Simple. Effective. No witnesses. Just the way I like it. You did good.
+  - Lines:
+    - Target eliminated. Excellent work.
+  - Lines:
+    - Man, this is sick! You really know your stuff!
+  - Lines:
+    - A painless death. Elegant. You exceeded my expectations.
+  _extraPoisonDialogues:
+  - Lines:
+    - "\u2026Do you feel it? The stench of weakness clings to this world. It has
+      been consumed by cowardice and false hope. Fix it. Give me a poison that will
+      reduce them to dust."
+  - Lines:
+    - "Humanity\u2026 so pitiful in its weakness. I need a poison that will wake
+      them from their illusions. One that will show only the strong deserve to live.
+      Can you handle it?"
+  - Lines:
+    - "Sins must be punished\u2026 pain is not enough. Bring me a poison to cleanse
+      their souls\u2026 permanently."
+  - Lines:
+    - Power is everything. Give me a poison that will show fate belongs only to those
+      strong enough to take it.
+  - Lines:
+    - "Do you feel the chill? It is the call\u2026 the call of eternity. Give me
+      a poison that will show them death is only the beginning."
+  - Lines:
+    - This world is rotting. People cling to their meaningless lives. I need a poison
+      to free them from this illusion.
+  - Lines:
+    - "Tell me\u2026 do you know what insanity is? It's doing the same thing over
+      and over and expecting different results. I need a poison that will change
+      their reality\u2026 permanently."
+  - Lines:
+    - At night, the world belongs to me. But there are those who dare to resist.
+      Bring me a poison that will make them bow their heads.
+  - Lines:
+    - "The weak deserve only one thing\u2014destruction. Give me a poison to prove
+      that only the strong survive."
+  - Lines:
+    - Progress demands sacrifice. Give me a poison that will clear the path to perfection.
+  _extraPoisonFinishDialogues:
+  - Lines:
+    - "Hmm\u2026 This poison\u2026 It carries pure destruction. Good work. The world
+      will burn clean."
+  - Lines:
+    - "Perfect. This\u2026 is a new dawn. Evolution is coming, and it will not spare
+      the weak."
+  - Lines:
+    - "Now\u2026 they understand. Be cleansed\u2026 or perish."
+  - Lines:
+    - "Hmph\u2026 As it should be. Weakness must be purged."
+  - Lines:
+    - "Excellent\u2026 They will join my ranks. The time has come."
+  - Lines:
+    - "Hah\u2026 the cleansing hour has come. All life will bow to my will."
+  - Lines:
+    - "HAHA! Now that\u2019s what I\u2019m talking about! They\u2019ll finally know
+      what true chaos is!"
+  - Lines:
+    - "Hah\u2026 Now the night is mine once more. Excellent work."
+  - Lines:
+    - HAHA! I approve. You have proven your worth.
+  - Lines:
+    - "Excellent\u2026 This poison is a step toward a greater future."
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

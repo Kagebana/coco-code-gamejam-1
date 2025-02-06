@@ -3,77 +3,80 @@ using UnityEngine.InputSystem;
 
 namespace Src.Control
 {
-    [RequireComponent(typeof(Rigidbody2D))]
-    public class TopDownController : MonoBehaviour
-    {
-        private static readonly int Moving = Animator.StringToHash("Moving");
+	[RequireComponent(typeof(Rigidbody2D))]
+	public class TopDownController : MonoBehaviour
+	{
+		private static readonly int Moving = Animator.StringToHash("Moving");
 
-        private const float RunSpeed = 3;
+		private const float RunSpeed = 3;
 
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private Animator _animator;
+		[SerializeField] private SpriteRenderer _spriteRenderer;
+		[SerializeField] private Animator _animator;
 
-        private PlayerInput _playerInput;
-        private Rigidbody2D _rigidbody2D;
+		private PlayerInput _playerInput;
+		private Rigidbody2D _rigidbody2D;
 
-        private void Awake()
-        {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-        }
+		private void Awake()
+		{
+			Cursor.visible = false;
+			Cursor.lockState = CursorLockMode.Locked;
 
-        private void OnEnable()
-        {
-            _playerInput = FindAnyObjectByType<PlayerInput>();
-            _playerInput.actions["Move"].performed += Move;
-            _playerInput.actions["Move"].canceled += Move;
-        }
+			_rigidbody2D = GetComponent<Rigidbody2D>();
+		}
 
-        private void OnDisable()
-        {
-            if (!_playerInput)
-            {
-                return;
-            }
+		private void OnEnable()
+		{
+			_playerInput = FindAnyObjectByType<PlayerInput>();
+			_playerInput.actions["Move"].performed += Move;
+			_playerInput.actions["Move"].canceled += Move;
+		}
 
-            _playerInput.actions["Move"].performed -= Move;
-            _playerInput.actions["Move"].canceled -= Move;
-        }
+		private void OnDisable()
+		{
+			if (!_playerInput)
+			{
+				return;
+			}
 
-        private void FixedUpdate()
-        {
-            _rigidbody2D.linearVelocity = Direction * RunSpeed;
+			_playerInput.actions["Move"].performed -= Move;
+			_playerInput.actions["Move"].canceled -= Move;
+		}
 
-            FlipSprite(Direction);
-            ChangeAnimationToRun(Direction);
-        }
+		private void FixedUpdate()
+		{
+			_rigidbody2D.linearVelocity = Direction * RunSpeed;
 
-        public bool CanControl { get; set; } = true;
-        public Vector2 Direction { get; set; } = Vector2.zero;
+			FlipSprite(Direction);
+			ChangeAnimationToRun(Direction);
+		}
 
-        private void Move(InputAction.CallbackContext callbackContext)
-        {
-            if (!CanControl)
-            {
-                Direction = Vector2.zero;
-                return;
-            }
+		public bool CanControl { get; set; } = true;
+		public Vector2 Direction { get; set; } = Vector2.zero;
 
-            Direction = callbackContext.ReadValue<Vector2>().normalized;
-        }
+		private void Move(InputAction.CallbackContext callbackContext)
+		{
+			if (!CanControl)
+			{
+				Direction = Vector2.zero;
+				return;
+			}
 
-        private void FlipSprite(Vector2 direction)
-        {
-            _spriteRenderer.flipX = direction.x switch
-            {
-                < 0 when !_spriteRenderer.flipX => true,
-                > 0 when _spriteRenderer.flipX => false,
-                _ => _spriteRenderer.flipX
-            };
-        }
+			Direction = callbackContext.ReadValue<Vector2>().normalized;
+		}
 
-        private void ChangeAnimationToRun(Vector2 direction)
-        {
-            _animator.SetBool(Moving, direction != Vector2.zero);
-        }
-    }
+		private void FlipSprite(Vector2 direction)
+		{
+			_spriteRenderer.flipX = direction.x switch
+			{
+				< 0 when !_spriteRenderer.flipX => true,
+				> 0 when _spriteRenderer.flipX => false,
+				_ => _spriteRenderer.flipX
+			};
+		}
+
+		private void ChangeAnimationToRun(Vector2 direction)
+		{
+			_animator.SetBool(Moving, direction != Vector2.zero);
+		}
+	}
 }
