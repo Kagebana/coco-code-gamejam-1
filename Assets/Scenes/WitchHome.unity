@@ -4402,7 +4402,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 1
+    height: 0.9991889
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -5061,7 +5061,87 @@ MonoBehaviour:
   - Lines:
     - The weak do not deserve power. Give me poison, and I will cleanse the world
       of them.
-  _localizedPoisonKeys: []
+  _localizedPoisonKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60309949698048
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60360881131520
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60423141380096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60488572522496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60597922222080
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60663625994240
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60731368198144
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60780391223296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60835495989248
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 60889011113984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _poisonFinishDialogues:
   - Lines:
     - Strong. Pure. No unnecessary additives. If they die quickly, you did well.
@@ -5087,7 +5167,87 @@ MonoBehaviour:
     - Man, this is sick! You really know your stuff!
   - Lines:
     - A painless death. Elegant. You exceeded my expectations.
-  _localizedPoisonFinishKeys: []
+  _localizedPoisonFinishKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61524599164928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61594295914496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61644321378304
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61724281589760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61782959902720
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61836823154688
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61885745516544
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61945875058688
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 61994864529408
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62042008506368
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _extraPoisonDialogues:
   - Lines:
     - "\u2026Do you feel it? The stench of weakness clings to this world. It has
@@ -5121,7 +5281,87 @@ MonoBehaviour:
       that only the strong survive."
   - Lines:
     - Progress demands sacrifice. Give me a poison that will clear the path to perfection.
-  _localizedExtraPoisonKeys: []
+  _localizedExtraPoisonKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62567538020352
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62612840697856
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62665416298496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62708730875904
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62756545941504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62865727868928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62920790691840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 62974217736192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63042329038848
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63090538369024
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _extraPoisonFinishDialogues:
   - Lines:
     - "Hmm\u2026 This poison\u2026 It carries pure destruction. Good work. The world
@@ -5146,7 +5386,87 @@ MonoBehaviour:
     - HAHA! I approve. You have proven your worth.
   - Lines:
     - "Excellent\u2026 This poison is a step toward a greater future."
-  _localizedExtraPoisonFinishKeys: []
+  _localizedExtraPoisonFinishKeys:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63705670799360
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63744229036032
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63794619404288
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63883001778176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 63935208280064
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 64031912153088
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 64089462198272
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 64136937525248
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 64251119063040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:0942d88cecd938a4389643f525586ed3
+    m_TableEntryReference:
+      m_KeyId: 64312435593216
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   references:
     version: 2
     RefIds: []
@@ -10310,7 +10630,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 3.2, y: 0.6}
+  m_SizeDelta: {x: 4.4, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124332992
 MonoBehaviour:
@@ -14174,7 +14494,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 3, y: 0.4}
+  m_SizeDelta: {x: 4.2, y: 0.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666325604
 MonoBehaviour:

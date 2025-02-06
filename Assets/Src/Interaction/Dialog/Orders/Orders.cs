@@ -197,10 +197,12 @@ namespace Src.Interaction.Dialog.Orders
                     {
                         case OrderStates.Poison:
                             _currentDialogId = Random.Range(0, _poisonDialogues.Length);
+                            LoadLocalizedDialogues(_poisonDialogues, _localizedPoisonKeys);
                             _dialogManager.StartDialogue(_poisonDialogues[_currentDialogId].Lines, _currentClip);
                             return;
                         case OrderStates.ExtraPoison:
                             _currentDialogId = Random.Range(0, _poisonFinishDialogues.Length);
+                            LoadLocalizedDialogues(_extraPoisonDialogues, _localizedExtraPoisonKeys);
                             _dialogManager.StartDialogue(_extraPoisonDialogues[_currentDialogId].Lines, _currentClip);
                             return;
                         case OrderStates.NotTaken:
@@ -210,11 +212,13 @@ namespace Src.Interaction.Dialog.Orders
                 }
                 case OrderStates.Poison when _characterInventory.InventoryState == InventoryStates.Poison:
                     _characterInventory.ChangeSlot(InventoryStates.Empty);
+                    LoadLocalizedDialogues(_poisonFinishDialogues, _localizedPoisonFinishKeys);
                     _dialogManager.StartDialogue(_poisonFinishDialogues[_currentDialogId].Lines, _currentClip);
                     _orderState = OrderStates.NotTaken;
                     return;
                 case OrderStates.ExtraPoison when _characterInventory.InventoryState == InventoryStates.ExtraPoison:
                     _characterInventory.ChangeSlot(InventoryStates.Empty);
+                    LoadLocalizedDialogues(_extraPoisonFinishDialogues, _localizedExtraPoisonFinishKeys);
                     _dialogManager.StartDialogue(_extraPoisonFinishDialogues[_currentDialogId].Lines, _currentClip);
                     _orderState = OrderStates.NotTaken;
                     return;
@@ -236,6 +240,23 @@ namespace Src.Interaction.Dialog.Orders
             for (var i = 0; i < localizedDialogueKeys.Length; i++)
             {
                 dialogueLines[i] = await GetLocalizedStringAsync(localizedDialogueKeys[i]);
+            }
+        }
+
+        private async void LoadLocalizedDialogues(DialogueLinesGroup[] dialogues, LocalizedString[] localizedKeys)
+        {
+            if (dialogues.Length != localizedKeys.Length)
+            {
+                Debug.LogError("Размеры массивов _poisonDialogues и _localizedPoisonKeys не совпадают!");
+                return;
+            }
+
+            for (var i = 0; i < dialogues.Length; i++)
+            {
+                for (var j = 0; j < dialogues[i].Lines.Length; j++)
+                {
+                    dialogues[i].Lines[j] = await GetLocalizedStringAsync(localizedKeys[i]);
+                }
             }
         }
     }
