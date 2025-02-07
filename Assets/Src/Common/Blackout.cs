@@ -25,7 +25,7 @@ namespace Src.Common
 
         public async Task FadeIn(float duration = 1f)
         {
-            var elapsed = 0f;
+            float elapsed = 0f;
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
@@ -38,7 +38,7 @@ namespace Src.Common
 
         public async Task FadeOut(float duration = 1f)
         {
-            var elapsed = 0f;
+            float elapsed = 0f;
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;

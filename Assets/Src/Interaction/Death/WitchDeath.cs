@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Src.Audio;
 using Src.Common;
@@ -26,6 +27,8 @@ namespace Src.Interaction.Death
 			_blackout = FindFirstObjectByType<Blackout>();
 			_musicManager = FindFirstObjectByType<MusicManager>();
 		}
+		
+		public Action OnDeath;
 
 		public async void Kill()
 		{
@@ -34,6 +37,7 @@ namespace Src.Interaction.Death
 			_audioSource.Play();
 			_blackout.SetWitchOnBlack();
 			_musicManager.ChangeMusic(MusicState.Death, false);
+			OnDeath?.Invoke();
 			await Task.Delay(10000);
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}

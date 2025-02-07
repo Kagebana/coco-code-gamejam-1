@@ -7,6 +7,7 @@ using Src.Interaction.Inventory;
 using Src.UI;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using Random = UnityEngine.Random;
 
 namespace Src.Interaction.Dialog.Orders
@@ -67,6 +68,9 @@ namespace Src.Interaction.Dialog.Orders
 		public Action OnExtraPoisonTutorialStarted;
 		public Action OnExtraPoisonTutorialFinished;
 
+		public Action OnPoisonSuccess;
+		public Action OnExtraPoisonSuccess;
+
 		public void Use()
 		{
 			if (FailureCheck())
@@ -104,7 +108,7 @@ namespace Src.Interaction.Dialog.Orders
 
 		private static async Task<string> GetLocalizedStringAsync(LocalizedString localizedString)
 		{
-			var handle = localizedString.GetLocalizedStringAsync();
+			AsyncOperationHandle<string> handle = localizedString.GetLocalizedStringAsync();
 			while (!handle.IsDone)
 			{
 				await Task.Yield();
@@ -214,16 +218,28 @@ namespace Src.Interaction.Dialog.Orders
 					LoadLocalizedDialogues(_poisonFinishDialogues, _localizedPoisonFinishKeys);
 					_dialogManager.StartDialogue(_poisonFinishDialogues[_currentDialogId].Lines, _currentClip);
 					_orderState = OrderStates.NotTaken;
+					OnPoisonSuccess?.Invoke();
 					return;
 				case OrderStates.ExtraPoison when _characterInventory.InventoryState == InventoryStates.ExtraPoison:
 					_characterInventory.ChangeSlot(InventoryStates.Empty);
 					LoadLocalizedDialogues(_extraPoisonFinishDialogues, _localizedExtraPoisonFinishKeys);
 					_dialogManager.StartDialogue(_extraPoisonFinishDialogues[_currentDialogId].Lines, _currentClip);
 					_orderState = OrderStates.NotTaken;
+					OnExtraPoisonSuccess?.Invoke();
 					return;
 				default:
-					_characterController.CanControl = true;
-					return;
+					switch (_orderState)
+					{
+						case OrderStates.Poison:
+							_dialogManager.StartDialogue(_poisonDialogues[_currentDialogId].Lines, _currentClip);
+							return;
+						case OrderStates.ExtraPoison:
+							_dialogManager.StartDialogue(_extraPoisonDialogues[_currentDialogId].Lines, _currentClip);
+							return;
+						case OrderStates.NotTaken:
+						default:
+							return;
+					}
 			}
 		}
 
@@ -236,7 +252,7 @@ namespace Src.Interaction.Dialog.Orders
 				return;
 			}
 
-			for (var i = 0; i < localizedDialogueKeys.Length; i++)
+			for (int i = 0; i < localizedDialogueKeys.Length; i++)
 			{
 				dialogueLines[i] = await GetLocalizedStringAsync(localizedDialogueKeys[i]);
 			}
@@ -250,9 +266,9 @@ namespace Src.Interaction.Dialog.Orders
 				return;
 			}
 
-			for (var i = 0; i < dialogues.Length; i++)
+			for (int i = 0; i < dialogues.Length; i++)
 			{
-				for (var j = 0; j < dialogues[i].Lines.Length; j++)
+				for (int j = 0; j < dialogues[i].Lines.Length; j++)
 				{
 					dialogues[i].Lines[j] = await GetLocalizedStringAsync(localizedKeys[i]);
 				}

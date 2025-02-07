@@ -57,6 +57,7 @@ namespace Src.Interaction.Tutorial
 			{
 				_tutorialStep = true;
 				_ingredientId = 0;
+				ChangeState(TutorialStates.Order);
 			};
 			_orders.OnExtraPoisonTutorialStarted +=
 				_onExtraPoisonTutorialStartedHandler = () => ChangeState(TutorialStates.Gold);
