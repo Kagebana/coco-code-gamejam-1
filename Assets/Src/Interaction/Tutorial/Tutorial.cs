@@ -1,5 +1,6 @@
 using System;
 using Src.Interaction.Dialog.Orders;
+using Src.Interaction.Inventory;
 using Src.UI;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ namespace Src.Interaction.Tutorial
 		private int _ingredientId;
 		private Transform _lookTarget;
 		private bool _tutorialStep;
+		private Inventory.Inventory _characterInventory;
 
 		private Action _onStartedHandler, _onPoisonTutorialStartedHandler, _onPoisonTutorialFinishedHandler;
 		private Action _onExtraPoisonTutorialStartedHandler, _onExtraPoisonTutorialFinishedHandler;
@@ -29,6 +31,7 @@ namespace Src.Interaction.Tutorial
 			_enter = FindAnyObjectByType<Enter.Enter>();
 			_orders = FindAnyObjectByType<Orders>();
 			_cauldronUsed = FindAnyObjectByType<Cauldron.Cauldron>();
+			_characterInventory = FindAnyObjectByType<Inventory.Inventory>(FindObjectsInactive.Include);
 		}
 
 		private void OnEnable()
@@ -82,9 +85,19 @@ namespace Src.Interaction.Tutorial
 
 		public void ChangeToCauldron()
 		{
-			if (!_menu.SkipTutorial)
+			if (_menu.SkipTutorial)
 			{
-				ChangeState(TutorialStates.Cauldron);
+				return;
+			}
+
+			switch (_tutorialState)
+			{
+				case TutorialStates.Order:
+				case TutorialStates.Gold when _characterInventory.InventoryState != InventoryStates.White:
+					return;
+				default:
+					ChangeState(TutorialStates.Cauldron);
+					break;
 			}
 		}
 
@@ -93,6 +106,11 @@ namespace Src.Interaction.Tutorial
 			if (_menu.SkipTutorial && newState != TutorialStates.Disable)
 			{
 				return;
+			}
+
+			if (newState == TutorialStates.Gold && _characterInventory.InventoryState == InventoryStates.White)
+			{
+				newState = TutorialStates.Cauldron;
 			}
 
 			_tutorialState = newState;
