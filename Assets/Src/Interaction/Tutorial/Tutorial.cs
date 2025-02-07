@@ -5,237 +5,183 @@ using UnityEngine;
 
 namespace Src.Interaction.Tutorial
 {
-    public class Tutorial : MonoBehaviour
-    {
-        [SerializeField] private GameObject _order;
-        [SerializeField] private GameObject _flask;
-        [SerializeField] private GameObject _cauldron;
-        [SerializeField] private GameObject _gold;
-        [SerializeField] private GameObject _red;
-        [SerializeField] private GameObject _green;
-        [SerializeField] private GameObject _purple;
+	public class Tutorial : MonoBehaviour
+	{
+		[SerializeField] private GameObject _navigation;
+		[SerializeField] private GameObject _order, _flask, _cauldron, _gold, _red, _green, _purple;
 
-        private TutorialStates _tutorialState = TutorialStates.Disable;
-        private Menu _menu;
-        private Enter.Enter _enter;
-        private Orders _orders;
-        private Cauldron.Cauldron _cauldronUsed;
-        private int _ingredientId;
+		private TutorialStates _tutorialState = TutorialStates.Disable;
+		private Menu _menu;
+		private Enter.Enter _enter;
+		private Orders _orders;
+		private Cauldron.Cauldron _cauldronUsed;
+		private int _ingredientId;
+		private Transform _lookTarget;
+		private bool _tutorialStep;
 
-        private bool _tutorialStep;
+		private Action _onStartedHandler, _onPoisonTutorialStartedHandler, _onPoisonTutorialFinishedHandler;
+		private Action _onExtraPoisonTutorialStartedHandler, _onExtraPoisonTutorialFinishedHandler;
+		private Action _onIngredientAddedHandler, _onPoisonBrewedHandler, _onPoisonTakenHandler;
 
-        private Action _onStartedHandler;
-        private Action _onPoisonTutorialStartedHandler;
-        private Action _onPoisonTutorialFinishedHandler;
-        private Action _onExtraPoisonTutorialStartedHandler;
-        private Action _onExtraPoisonTutorialFinishedHandler;
+		private void Awake()
+		{
+			_menu = FindAnyObjectByType<Menu>();
+			_enter = FindAnyObjectByType<Enter.Enter>();
+			_orders = FindAnyObjectByType<Orders>();
+			_cauldronUsed = FindAnyObjectByType<Cauldron.Cauldron>();
+		}
 
-        private Action _onIngredientAddedHandler;
-        private Action _onPoisonBrewedHandler;
-        private Action _onPoisonTakenHandler;
+		private void OnEnable()
+		{
+			SubscribeToEvents();
+		}
 
-        private void Awake()
-        {
-            _menu = FindAnyObjectByType<Menu>();
-            _enter = FindAnyObjectByType<Enter.Enter>();
-            _orders = FindAnyObjectByType<Orders>();
-            _cauldronUsed = FindAnyObjectByType<Cauldron.Cauldron>();
-        }
+		private void OnDisable()
+		{
+			UnsubscribeFromEvents();
+		}
 
-        private void OnEnable()
-        {
-            _onStartedHandler = () => ChangeState(TutorialStates.Order);
-            _enter.OnStarted += _onStartedHandler;
-            _onPoisonTutorialStartedHandler = () => ChangeState(TutorialStates.Gold);
-            _orders.OnPoisonTutorialStarted += _onPoisonTutorialStartedHandler;
-            _onPoisonTutorialFinishedHandler = () =>
-            {
-                _tutorialStep = true;
-                _ingredientId = 0;
-            };
-            _orders.OnPoisonTutorialFinished += _onPoisonTutorialFinishedHandler;
-            _onExtraPoisonTutorialStartedHandler = () => ChangeState(TutorialStates.Gold);
-            _orders.OnExtraPoisonTutorialStarted += _onExtraPoisonTutorialStartedHandler;
-            _onExtraPoisonTutorialFinishedHandler = () => ChangeState(TutorialStates.Disable);
-            _orders.OnExtraPoisonTutorialFinished += _onExtraPoisonTutorialFinishedHandler;
+		private void FixedUpdate()
+		{
+			if (!_menu.SkipTutorial)
+			{
+				LookAtTarget();
+			}
+		}
 
-            _onIngredientAddedHandler = ChangeByIngredient;
-            _cauldronUsed.OnIngredientAdded += _onIngredientAddedHandler;
+		private void SubscribeToEvents()
+		{
+			_enter.OnStarted += _onStartedHandler = () => ChangeState(TutorialStates.Order);
+			_orders.OnPoisonTutorialStarted += _onPoisonTutorialStartedHandler = () => ChangeState(TutorialStates.Gold);
+			_orders.OnPoisonTutorialFinished += _onPoisonTutorialFinishedHandler = () =>
+			{
+				_tutorialStep = true;
+				_ingredientId = 0;
+			};
+			_orders.OnExtraPoisonTutorialStarted +=
+				_onExtraPoisonTutorialStartedHandler = () => ChangeState(TutorialStates.Gold);
+			_orders.OnExtraPoisonTutorialFinished +=
+				_onExtraPoisonTutorialFinishedHandler = () => ChangeState(TutorialStates.Disable);
+			_cauldronUsed.OnIngredientAdded += _onIngredientAddedHandler = ChangeByIngredient;
+			_cauldronUsed.OnPoisonBrewed += _onPoisonBrewedHandler = () => ChangeState(TutorialStates.Flask);
+			_cauldronUsed.OnPoisonTaken += _onPoisonTakenHandler = () => ChangeState(TutorialStates.Order);
+		}
 
-            _onPoisonBrewedHandler = () => ChangeState(TutorialStates.Flask);
-            _cauldronUsed.OnPoisonBrewed += _onPoisonBrewedHandler;
+		private void UnsubscribeFromEvents()
+		{
+			_enter.OnStarted -= _onStartedHandler;
+			_orders.OnPoisonTutorialStarted -= _onPoisonTutorialStartedHandler;
+			_orders.OnPoisonTutorialFinished -= _onPoisonTutorialFinishedHandler;
+			_orders.OnExtraPoisonTutorialStarted -= _onExtraPoisonTutorialStartedHandler;
+			_orders.OnExtraPoisonTutorialFinished -= _onExtraPoisonTutorialFinishedHandler;
+			_cauldronUsed.OnIngredientAdded -= _onIngredientAddedHandler;
+			_cauldronUsed.OnPoisonBrewed -= _onPoisonBrewedHandler;
+			_cauldronUsed.OnPoisonTaken -= _onPoisonTakenHandler;
+		}
 
-            _onPoisonTakenHandler = () => ChangeState(TutorialStates.Order);
-            _cauldronUsed.OnPoisonTaken += _onPoisonTakenHandler;
-        }
+		public void ChangeToCauldron()
+		{
+			if (!_menu.SkipTutorial)
+			{
+				ChangeState(TutorialStates.Cauldron);
+			}
+		}
 
-        private void OnDisable()
-        {
-            _enter.OnStarted -= _onStartedHandler;
-            _orders.OnPoisonTutorialStarted -= _onPoisonTutorialStartedHandler;
-            _orders.OnPoisonTutorialFinished -= _onPoisonTutorialFinishedHandler;
-            _orders.OnExtraPoisonTutorialStarted -= _onExtraPoisonTutorialStartedHandler;
-            _orders.OnExtraPoisonTutorialFinished -= _onExtraPoisonTutorialFinishedHandler;
-            _cauldronUsed.OnIngredientAdded -= _onIngredientAddedHandler;
-            _cauldronUsed.OnPoisonBrewed -= _onPoisonBrewedHandler;
-            _cauldronUsed.OnPoisonTaken -= _onPoisonTakenHandler;
-        }
+		private void ChangeState(TutorialStates newState)
+		{
+			if (_menu.SkipTutorial && newState != TutorialStates.Disable)
+			{
+				return;
+			}
 
-        public void ChangeToCauldron()
-        {
-            if (_menu.SkipTutorial)
-            {
-                return;
-            }
+			_tutorialState = newState;
+			_navigation.SetActive(true);
+			DisableAllSteps();
 
-            ChangeState(TutorialStates.Cauldron);
-        }
+			if (_tutorialState == TutorialStates.Disable)
+			{
+				_navigation.SetActive(false);
+				return;
+			}
 
-        private void ChangeState(TutorialStates newState)
-        {
-            if (_menu.SkipTutorial)
-            {
-                return;
-            }
+			GameObject activeStep = GetActiveStep(_tutorialState);
+			if (activeStep != null)
+			{
+				activeStep.SetActive(true);
+			}
 
-            _tutorialState = newState;
+			_lookTarget = activeStep?.transform;
+		}
 
-            switch (_tutorialState)
-            {
-                case TutorialStates.Order:
-                    _order.SetActive(true);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Flask:
-                    _order.SetActive(false);
-                    _flask.SetActive(true);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Cauldron:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(true);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Gold:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(true);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Red:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(true);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Green:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(true);
-                    _purple.SetActive(false);
-                    break;
-                case TutorialStates.Purple:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(true);
-                    break;
-                case TutorialStates.Disable:
-                    _order.SetActive(false);
-                    _flask.SetActive(false);
-                    _cauldron.SetActive(false);
-                    _gold.SetActive(false);
-                    _red.SetActive(false);
-                    _green.SetActive(false);
-                    _purple.SetActive(false);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
+		private void DisableAllSteps()
+		{
+			_order.SetActive(false);
+			_flask.SetActive(false);
+			_cauldron.SetActive(false);
+			_gold.SetActive(false);
+			_red.SetActive(false);
+			_green.SetActive(false);
+			_purple.SetActive(false);
+		}
 
-        private void ChangeByIngredient()
-        {
-            if (_menu.SkipTutorial)
-            {
-                return;
-            }
-            print("Ingredient");
-            _ingredientId++;
-            if (!_tutorialStep)
-            {
-                if (_ingredientId == 1)
-                {
-                    ChangeState(TutorialStates.Red);
-                }
+		private GameObject GetActiveStep(TutorialStates state)
+		{
+			return state switch
+			{
+				TutorialStates.Order => _order,
+				TutorialStates.Flask => _flask,
+				TutorialStates.Cauldron => _cauldron,
+				TutorialStates.Gold => _gold,
+				TutorialStates.Red => _red,
+				TutorialStates.Green => _green,
+				TutorialStates.Purple => _purple,
+				_ => null
+			};
+		}
 
-                if (_ingredientId == 2)
-                {
-                    ChangeState(TutorialStates.Purple);
-                }
+		private void ChangeByIngredient()
+		{
+			if (_menu.SkipTutorial)
+			{
+				return;
+			}
 
-                if (_ingredientId == 3)
-                {
-                    ChangeState(TutorialStates.Green);
-                }
+			_ingredientId++;
 
-                if (_ingredientId == 4)
-                {
-                    ChangeState(TutorialStates.Green);
-                }
-            }
-            else
-            {
-                if (_ingredientId == 1)
-                {
-                    ChangeState(TutorialStates.Purple);
-                }
+			if (_tutorialStep)
+			{
+				ChangeState(_ingredientId switch
+				{
+					1 => TutorialStates.Purple,
+					2 => TutorialStates.Red,
+					3 => TutorialStates.Red,
+					4 => TutorialStates.Purple,
+					5 => TutorialStates.Green,
+					_ => _tutorialState
+				});
+			}
+			else
+			{
+				ChangeState(_ingredientId switch
+				{
+					1 => TutorialStates.Red,
+					2 => TutorialStates.Purple,
+					3 or 4 => TutorialStates.Green,
+					_ => _tutorialState
+				});
+			}
+		}
 
-                if (_ingredientId == 2)
-                {
-                    ChangeState(TutorialStates.Red);
-                }
+		private void LookAtTarget()
+		{
+			if (_lookTarget == null)
+			{
+				return;
+			}
 
-                if (_ingredientId == 3)
-                {
-                    ChangeState(TutorialStates.Red);
-                }
-
-                if (_ingredientId == 4)
-                {
-                    ChangeState(TutorialStates.Purple);
-                }
-
-                if (_ingredientId == 5)
-                {
-                    ChangeState(TutorialStates.Green);
-                }
-            }
-        }
-    }
+			Vector3 direction = _lookTarget.position - _navigation.transform.position;
+			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+			_navigation.transform.rotation = Quaternion.Euler(0, 0, angle);
+		}
+	}
 }
