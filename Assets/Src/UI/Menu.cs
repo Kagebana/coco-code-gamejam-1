@@ -8,151 +8,156 @@ using UnityEngine.InputSystem;
 
 namespace Src.UI
 {
-	public class Menu : MonoBehaviour, IPointerClickHandler
-	{
-		[SerializeField] private GameObject _mainMenu;
-		[SerializeField] private GameObject _mainMenuButton;
-		[SerializeField] private GameObject _settingsMenu;
-		[SerializeField] private GameObject _settingsButton;
-		[SerializeField] private TextMeshProUGUI _skipTutorialText;
-		[SerializeField] private GameObject _creditsMenu;
-		[SerializeField] private GameObject _creditsButton;
+    public class Menu : MonoBehaviour, IPointerClickHandler
+    {
+        [SerializeField] private GameObject _mainMenu;
+        [SerializeField] private GameObject _mainMenuButton;
+        [SerializeField] private GameObject _settingsMenu;
+        [SerializeField] private GameObject _settingsButton;
+        [SerializeField] private TextMeshProUGUI _skipTutorialText;
+        [SerializeField] private GameObject _creditsMenu;
+        [SerializeField] private GameObject _creditsButton;
+        [SerializeField] private GameObject _exitButton;
 
-		private MenuStates _menuState = MenuStates.MainMenu;
-		private PlayerInput _playerInput;
-		private EventSystem _eventSystem;
-		private GameObject _currentButton;
-		private MusicManager _musicManager;
-		private Enter _enter;
-		private Orders _orders;
+        private MenuStates _menuState = MenuStates.MainMenu;
+        private PlayerInput _playerInput;
+        private EventSystem _eventSystem;
+        private GameObject _currentButton;
+        private MusicManager _musicManager;
+        private Enter _enter;
+        private Orders _orders;
 
-		private void Awake()
-		{
-			_eventSystem = FindAnyObjectByType<EventSystem>();
-			_currentButton = _mainMenuButton;
-			_musicManager = FindAnyObjectByType<MusicManager>();
-			_enter = FindAnyObjectByType<Enter>();
-			_orders = FindAnyObjectByType<Orders>();
-		}
+        private void Awake()
+        {
+            _eventSystem = FindAnyObjectByType<EventSystem>();
+            _currentButton = _mainMenuButton;
+            _musicManager = FindAnyObjectByType<MusicManager>();
+            _enter = FindAnyObjectByType<Enter>();
+            _orders = FindAnyObjectByType<Orders>();
+        }
 
-		private void OnEnable()
-		{
-			_playerInput = FindAnyObjectByType<PlayerInput>();
-			_playerInput.actions["Navigate"].performed += ReturnFocus;
-			_orders.OnExtraPoisonTutorialFinished += ChangeSkipTutorial;
-		}
+        private void OnEnable()
+        {
+            _playerInput = FindAnyObjectByType<PlayerInput>();
+            _playerInput.actions["Navigate"].performed += ReturnFocus;
+            _orders.OnExtraPoisonTutorialFinished += ChangeSkipTutorial;
+        }
 
-		private void Start()
-		{
-			_musicManager.ChangeMusic(MusicState.Menu, true);
-			LoadSave();
-		}
+        private void Start()
+        {
+            _musicManager.ChangeMusic(MusicState.Menu, true);
+            LoadSave();
 
-		private void OnDisable()
-		{
-			_orders.OnExtraPoisonTutorialFinished -= ChangeSkipTutorial;
-			
-			if (!_playerInput)
-			{
-				return;
-			}
+#if UNITY_WEBGL && !UNITY_EDITOR
+            _exitButton.SetActive(false);
+#endif
+        }
 
-			_playerInput.actions["Navigate"].performed -= ReturnFocus;
-		}
+        private void OnDisable()
+        {
+            _orders.OnExtraPoisonTutorialFinished -= ChangeSkipTutorial;
 
-		public bool SkipTutorial { get; private set; }
+            if (!_playerInput)
+            {
+                return;
+            }
 
-		public void OnPointerClick(PointerEventData eventData)
-		{
-			ChangeButton(_currentButton);
-		}
+            _playerInput.actions["Navigate"].performed -= ReturnFocus;
+        }
 
-		public void ToPlay()
-		{
-			_musicManager.StopMusic();
-			_enter.ToStart();
-			ChangeMenu(MenuStates.Closed);
-		}
+        public bool SkipTutorial { get; private set; }
 
-		public void ToSettings()
-		{
-			ChangeMenu(MenuStates.Settings);
-		}
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            ChangeButton(_currentButton);
+        }
 
-		public void ChangeSkipTutorial()
-		{
-			SkipTutorial = !SkipTutorial;
-			_skipTutorialText.text = SkipTutorial ? "+" : "-";
-			PlayerPrefs.SetInt("SkipTutorial", SkipTutorial ? 1 : 0);
-			PlayerPrefs.Save();
-		}
+        public void ToPlay()
+        {
+            _musicManager.StopMusic();
+            _enter.ToStart();
+            ChangeMenu(MenuStates.Closed);
+        }
 
-		public void ToCredits()
-		{
-			ChangeMenu(MenuStates.Credits);
-		}
+        public void ToSettings()
+        {
+            ChangeMenu(MenuStates.Settings);
+        }
 
-		public void ToExit()
-		{
-			Application.Quit();
-		}
+        public void ChangeSkipTutorial()
+        {
+            SkipTutorial = !SkipTutorial;
+            _skipTutorialText.text = SkipTutorial ? "+" : "-";
+            PlayerPrefs.SetInt("SkipTutorial", SkipTutorial ? 1 : 0);
+            PlayerPrefs.Save();
+        }
 
-		public void ToBack()
-		{
-			ChangeMenu(MenuStates.MainMenu);
-		}
+        public void ToCredits()
+        {
+            ChangeMenu(MenuStates.Credits);
+        }
 
-		private void ReturnFocus(InputAction.CallbackContext callbackContext)
-		{
-			if (!_eventSystem.currentSelectedGameObject)
-			{
-				ChangeButton(_currentButton);
-			}
-		}
+        public void ToExit()
+        {
+            Application.Quit();
+        }
 
-		private void ChangeMenu(MenuStates newState)
-		{
-			_menuState = newState;
+        public void ToBack()
+        {
+            ChangeMenu(MenuStates.MainMenu);
+        }
 
-			if (_menuState == MenuStates.MainMenu)
-			{
-				_settingsMenu.SetActive(false);
-				_creditsMenu.SetActive(false);
-				_mainMenu.SetActive(true);
-				ChangeButton(_mainMenuButton);
-			}
+        private void ReturnFocus(InputAction.CallbackContext callbackContext)
+        {
+            if (!_eventSystem.currentSelectedGameObject)
+            {
+                ChangeButton(_currentButton);
+            }
+        }
 
-			if (_menuState == MenuStates.Settings)
-			{
-				_mainMenu.SetActive(false);
-				_settingsMenu.SetActive(true);
-				ChangeButton(_settingsButton);
-			}
+        private void ChangeMenu(MenuStates newState)
+        {
+            _menuState = newState;
 
-			if (_menuState == MenuStates.Credits)
-			{
-				_mainMenu.SetActive(false);
-				_creditsMenu.SetActive(true);
-				ChangeButton(_creditsButton);
-			}
+            if (_menuState == MenuStates.MainMenu)
+            {
+                _settingsMenu.SetActive(false);
+                _creditsMenu.SetActive(false);
+                _mainMenu.SetActive(true);
+                ChangeButton(_mainMenuButton);
+            }
 
-			if (_menuState == MenuStates.Closed)
-			{
-				_mainMenu.SetActive(false);
-				_creditsMenu.SetActive(false);
-			}
-		}
+            if (_menuState == MenuStates.Settings)
+            {
+                _mainMenu.SetActive(false);
+                _settingsMenu.SetActive(true);
+                ChangeButton(_settingsButton);
+            }
 
-		private void ChangeButton(GameObject button)
-		{
-			_currentButton = button;
-			_eventSystem.SetSelectedGameObject(_currentButton);
-		}
+            if (_menuState == MenuStates.Credits)
+            {
+                _mainMenu.SetActive(false);
+                _creditsMenu.SetActive(true);
+                ChangeButton(_creditsButton);
+            }
 
-		private void LoadSave()
-		{
-			SkipTutorial = PlayerPrefs.GetInt("SkipTutorial", 0) == 1;
-			_skipTutorialText.text = SkipTutorial ? "+" : "-";
-		}
-	}
+            if (_menuState == MenuStates.Closed)
+            {
+                _mainMenu.SetActive(false);
+                _creditsMenu.SetActive(false);
+            }
+        }
+
+        private void ChangeButton(GameObject button)
+        {
+            _currentButton = button;
+            _eventSystem.SetSelectedGameObject(_currentButton);
+        }
+
+        private void LoadSave()
+        {
+            SkipTutorial = PlayerPrefs.GetInt("SkipTutorial", 0) == 1;
+            _skipTutorialText.text = SkipTutorial ? "+" : "-";
+        }
+    }
 }

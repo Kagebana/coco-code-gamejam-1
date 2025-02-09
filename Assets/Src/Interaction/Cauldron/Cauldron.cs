@@ -100,7 +100,7 @@ namespace Src.Interaction.Cauldron
 
             if (_currentIngredients.Count > Mathf.Max(_poisonRecipe.Length, _extraPoisonRecipe.Length))
             {
-                _characterDeath.Kill();
+                _characterDeath.Kill().Forget();
                 return;
             }
 
@@ -126,7 +126,7 @@ namespace Src.Interaction.Cauldron
             }
             else
             {
-                _characterDeath.Kill();
+                _characterDeath.Kill().Forget();
                 return;
             }
 
